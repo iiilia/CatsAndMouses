@@ -9,12 +9,6 @@ import java.awt.geom.Ellipse2D;
 import game.server.Direction;
 import game.server.TrackState;
 
-/**
- * Curve is always a right bend when moving in the direction orienation.
- * 
- * @author Felix Schneider
- * @version
- */
 public class Curve extends TrackTile {
 
 	/**
