@@ -18,7 +18,7 @@ import javax.swing.border.TitledBorder;
 import game.server.Connection;
 import game.server.Player;
 
-public class HardRockControlCenter {
+public class ControlCenter {
 
     private JButton                              abortButton;
     private JList<Map.Entry<Connection, Player>> connections;
@@ -27,7 +27,7 @@ public class HardRockControlCenter {
     private JButton                              quitButton;
     private JButton                              raceStateButton;
 
-    public HardRockControlCenter() {
+    public ControlCenter() {
         initializeStuff();
         frame.setVisible(true);
     }

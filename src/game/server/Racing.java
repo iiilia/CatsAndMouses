@@ -21,7 +21,7 @@ import game.server.event.MineDropListener;
 import game.server.event.MissileFireEvent;
 import game.server.event.MissileFireListener;
 import game.server.gui.QueuedAction;
-import game.server.gui.HardRockControlCenter;
+import game.server.gui.ControlCenter;
 import game.server.tracktiles.CheckPoint;
 import game.server.tracktiles.FinishLine;
 
@@ -33,7 +33,7 @@ public class Racing {
     public static final int                     pauseAfterRace  = 10;
     public static final int                     pauseBeforeRace = 5;
 
-    private HardRockControlCenter               controlCenter;
+    private ControlCenter               		controlCenter;
     private int                                 curIndex;
     private Track                               currentTrack;
     private List<Player>                        finished;
@@ -69,7 +69,7 @@ public class Racing {
         finished = new ArrayList<>();
         queuedActions = new ConcurrentLinkedQueue<>();
         protocol = new Protocol(this);
-        controlCenter = new HardRockControlCenter();
+        controlCenter = new ControlCenter();
         newProjectiles = new ConcurrentLinkedQueue<>();
         initializeGUI();
     }
