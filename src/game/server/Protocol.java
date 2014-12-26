@@ -43,8 +43,6 @@ public class Protocol {
         constants.put("car.minturnspeed", Car.minSpeed);
         constants.put("car.collision.rotation", Car.collisionRotation);
         constants.put("car.collision.bounce", Car.collisionRepulsion);
-        constants.put("car.collision.mindamagespeed", Car.damageThreshHold);
-        constants.put("car.hp", Car.maxHP);
         constants.put("missile.hitbox.width", Missile.hitbox.getWidth());
         constants.put("missile.hitbox.height", Missile.hitbox.getHeight());
         constants.put("missile.speed", Missile.speed);
@@ -69,7 +67,7 @@ public class Protocol {
     }
 
     private ConcurrentLinkedQueue<Connection>     disconnected;
-    private Racing                        game;
+    private Racing                        		  game;
     private boolean                               hasPlayers;
     private ConnectionListener                    listener;
     private ConcurrentHashMap<Connection, Player> players;
