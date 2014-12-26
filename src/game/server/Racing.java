@@ -74,6 +74,7 @@ public class Racing {
         initializeGUI();
     }
 
+    //Удаление игрока из игры
     public void dropPlayer(Player player) {
         boolean removed = racers.remove(player);
         if (!removed) {
@@ -92,40 +93,49 @@ public class Racing {
         }
     }
 
+    //Получние текущей карты
     public Track getCurrentTrack() {
         return currentTrack;
     }
 
+    //Список мин
     public List<Mine> getMines() {
         return mines;
     }
 
+    //Список снарядов
     public List<Missile> getMissiles() {
         return missiles;
     }
 
+    //Список игроков
     public List<Player> getRacers() {
         return racers;
     }
 
+    //Состояние гонки
     public RaceState getState() {
         return state;
     }
 
+    //Таймер сервера
     public double getTimer() {
         return serverTime;
     }
 
+    //Добавить действие в очередь
     public void queueAction(QueuedAction action) {
         queuedActions.add(action);
     }
 
+    //Учтановить состояние гонки
     public void setRaceState(RaceState raceState) {
         while (state != raceState && state != RaceState.WAITING) {
             advanceGameState();
         }
     }
 
+    //Запуск игры
     public void start() {
         running = true;
         protocol.start();
@@ -155,8 +165,8 @@ public class Racing {
         if (state != RaceState.WAITING) {
             return;
         }
-        // set to PRERACE
-        // load track
+        // Обновить состояние на PRERACE
+        // Загрузить карту
         try {
             currentTrack = TrackLoader.loadTrack(maps.get(curIndex));
         } catch (IOException e) {
@@ -164,13 +174,13 @@ public class Racing {
             throw new RuntimeException(e);
         }
         curIndex = (curIndex + 1) % maps.size();
-        if (racers.size() > 4 || racers.isEmpty()) {
+        if (racers.size() > 4 || racers.isEmpty()) {									//Проверка на количество игроков
             stop();
             throw new IllegalArgumentException("Trying to start race with " + racers.size() + " players!");
         }
         for (Player player : racers) {
-            this.racers.add(player);
-            player.addMineDropListener(new MineDropListener() {
+            this.racers.add(player);													//Добавляем игроков
+            player.addMineDropListener(new MineDropListener() {							//Добавляем обработчики событий
 
                 @Override
                 public void mineDropped(MineDropEvent event) {
@@ -210,7 +220,7 @@ public class Racing {
         protocol.stop();
     }
 
-    protected void updateGUI() {
+    protected void updateGUI() {																//Отрисовка GUI сервера
         if (state == RaceState.WAITING) {
             controlCenter.getRaceStateButton().setEnabled(false);
         } else {
@@ -227,7 +237,7 @@ public class Racing {
         controlCenter.getFrame().repaint();
     }
 
-    private void advanceGameState() {
+    private void advanceGameState() {															//Изменение состояние игры
         switch (state) {
         case PRERACE:
             startRace();
@@ -243,7 +253,7 @@ public class Racing {
         updateGUI();
     }
 
-    private void checkPointReached(CheckPointEvent event) {
+    private void checkPointReached(CheckPointEvent event) {										//Обработка прохождения чекпоинтов
         if (!(event.getSource() instanceof Player)) {
             return;
         }
