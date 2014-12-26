@@ -1,3 +1,6 @@
+/*
+ * Интерфейс для обновления разницы
+ */
 package game.server;
 
 public interface Updates {

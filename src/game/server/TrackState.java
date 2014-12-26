@@ -1,3 +1,6 @@
+/*
+ * 
+ */
 package game.server;
 
 import java.awt.Point;

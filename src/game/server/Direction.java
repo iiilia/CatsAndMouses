@@ -1,9 +1,12 @@
+/*
+ * Направления
+ */
 package game.server;
 
-public enum Direction {
+public enum Direction {																//Перечисление направлений
 	LEFT, UP, RIGHT, DOWN;
 
-	public Direction opposite() {
+	public Direction opposite() {													//Получние противополжного направления
 		switch (this) {
 		case LEFT:
 			return RIGHT;
@@ -18,7 +21,7 @@ public enum Direction {
 		}
 	}
 
-	public Direction clockwise() {
+	public Direction clockwise() {													//Получение направления по часовой стрелке
 		switch (this) {
 		case LEFT:
 			return UP;
@@ -33,7 +36,7 @@ public enum Direction {
 		}
 	}
 
-	public Direction cclockwise() {
+	public Direction cclockwise() {													//Получние направление против часовой стрелки
 		switch (this) {
 		case LEFT:
 			return DOWN;
@@ -48,7 +51,7 @@ public enum Direction {
 		}
 	}
 
-	public double getAngle() {
+	public double getAngle() {														//Получение угла поворота
 		switch (this) {
 		case LEFT:
 			return Math.PI;
