@@ -1,0 +1,325 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_TJYtsI1TEeS-muvgwqy9Mw">
+  <modelElement href="CatsAndMouses2.uml#_LL-LM41TEeS-muvgwqy9Mw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_VFhqQI1TEeS-muvgwqy9Mw" source="_VFiRUI1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_LzooIY1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VF-WMI1TEeS-muvgwqy9Mw" position="250.0,250.0"/>
+    <stereotypes xmi:id="_VFhqQY1TEeS-muvgwqy9Mw" name="Reference">
+      <modelElement href="CatsAndMouses2.uml#_LzpPMI1TEeS-muvgwqy9Mw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_VFhqQo1TEeS-muvgwqy9Mw" text=""/>
+    <sourceRole xmi:id="_VFhqQ41TEeS-muvgwqy9Mw" aggregationKind="NONE" name="">
+      <modelElement href="CatsAndMouses2.uml#_LzooIo1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFhqRI1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VFhqRY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_VFhqRo1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="checkPoint" navigable="true">
+      <modelElement href="CatsAndMouses2.uml#_Lxdd4I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFhqR41TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VFhqSI1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_VFz-II1TEeS-muvgwqy9Mw" source="_VF0lMI1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_Lz2DgY1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VF-9QI1TEeS-muvgwqy9Mw" position="270.0,270.0"/>
+    <stereotypes xmi:id="_VFz-IY1TEeS-muvgwqy9Mw" name="Reference">
+      <modelElement href="CatsAndMouses2.uml#_Lz2qkI1TEeS-muvgwqy9Mw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_VFz-Io1TEeS-muvgwqy9Mw" text=""/>
+    <sourceRole xmi:id="_VFz-I41TEeS-muvgwqy9Mw" aggregationKind="NONE" name="">
+      <modelElement href="CatsAndMouses2.uml#_Lz2Dgo1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFz-JI1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VFz-JY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_VFz-Jo1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="mine" navigable="true">
+      <modelElement href="CatsAndMouses2.uml#_Lxw_4o1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFz-J41TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VFz-KI1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_VF6r0I1TEeS-muvgwqy9Mw" source="_VF7S4I1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_Lz2qkY1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VF-9QY1TEeS-muvgwqy9Mw" position="290.0,290.0"/>
+    <stereotypes xmi:id="_VF6r0Y1TEeS-muvgwqy9Mw" name="Reference">
+      <modelElement href="CatsAndMouses2.uml#_Lz3RoI1TEeS-muvgwqy9Mw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_VF6r0o1TEeS-muvgwqy9Mw" text=""/>
+    <sourceRole xmi:id="_VF6r041TEeS-muvgwqy9Mw" aggregationKind="NONE" name="">
+      <modelElement href="CatsAndMouses2.uml#_Lz2qko1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VF6r1I1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VF6r1Y1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_VF6r1o1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="missile" navigable="true">
+      <modelElement href="CatsAndMouses2.uml#_Lxxm8o1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VF6r141TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VF6r2I1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_VFem8I1TEeS-muvgwqy9Mw" name="CheckPointListener">
+    <modelElement href="CatsAndMouses2.uml#_LWO6cI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VFem8Y1TEeS-muvgwqy9Mw" position="50.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VFem8o1TEeS-muvgwqy9Mw" label="+"/>
+    <operations xmi:id="_VFem841TEeS-muvgwqy9Mw" name="checkPoint">
+      <modelElement href="CatsAndMouses2.uml#_LrbuYI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFem9I1TEeS-muvgwqy9Mw" label="+"/>
+      <parameters xmi:id="_VFem9Y1TEeS-muvgwqy9Mw" name="e">
+        <modelElement href="CatsAndMouses2.uml#_LrbuYY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFem9o1TEeS-muvgwqy9Mw" name="CheckPointEvent">
+          <modelElement href="CatsAndMouses2.uml#_LWQvoI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_VFiRUI1TEeS-muvgwqy9Mw" name="CheckPointEvent" associationsOut="_VFhqQI1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_LWQvoI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VFiRUY1TEeS-muvgwqy9Mw" position="-517.0,22.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VFiRUo1TEeS-muvgwqy9Mw" label="+"/>
+    <attributes xmi:id="_VFiRU41TEeS-muvgwqy9Mw" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="CatsAndMouses2.uml#_Lxc20I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFiRVI1TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_VFiRVY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VFiRVo1TEeS-muvgwqy9Mw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_VFiRV41TEeS-muvgwqy9Mw" name="checkPoint">
+      <modelElement href="CatsAndMouses2.uml#_Lxdd4I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFiRWI1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VFiRWY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VFiRWo1TEeS-muvgwqy9Mw" name="CheckPoint">
+        <modelElement href="CatsAndMouses2.uml#_LYEtgI1TEeS-muvgwqy9Mw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_VFiRW41TEeS-muvgwqy9Mw" name="CheckPointEvent">
+      <modelElement href="CatsAndMouses2.uml#_LuebUI1TEeS-muvgwqy9Mw"/>
+      <keywords xmi:id="_VFiRXI1TEeS-muvgwqy9Mw" keyword="create"/>
+      <visibility xmi:id="_VFiRXY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VFiRXo1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LufCYo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFiRX41TEeS-muvgwqy9Mw" name="CheckPointEvent">
+          <modelElement href="CatsAndMouses2.uml#_LWQvoI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VFiRYI1TEeS-muvgwqy9Mw" name="source">
+        <modelElement href="CatsAndMouses2.uml#_LuebUY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFiRYY1TEeS-muvgwqy9Mw" name="Object">
+          <modelElement href="CatsAndMouses2.uml#_Lt6aoI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_VFiRYo1TEeS-muvgwqy9Mw" name="checkPoint">
+        <modelElement href="CatsAndMouses2.uml#_LuebUo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFiRY41TEeS-muvgwqy9Mw" name="CheckPoint">
+          <modelElement href="CatsAndMouses2.uml#_LYEtgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_VFl7sI1TEeS-muvgwqy9Mw" name="DestroyedEvent">
+    <modelElement href="CatsAndMouses2.uml#_LXoooI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VFl7sY1TEeS-muvgwqy9Mw" position="351.0,41.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VFl7so1TEeS-muvgwqy9Mw" label="+"/>
+    <attributes xmi:id="_VFl7s41TEeS-muvgwqy9Mw" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="CatsAndMouses2.uml#_LxvxwI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFl7tI1TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_VFl7tY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VFl7to1TEeS-muvgwqy9Mw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_VFl7t41TEeS-muvgwqy9Mw" name="DestroyedEvent">
+      <modelElement href="CatsAndMouses2.uml#_LuzLcI1TEeS-muvgwqy9Mw"/>
+      <keywords xmi:id="_VFl7uI1TEeS-muvgwqy9Mw" keyword="create"/>
+      <visibility xmi:id="_VFl7uY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VFl7uo1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LuzLdI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFl7u41TEeS-muvgwqy9Mw" name="DestroyedEvent">
+          <modelElement href="CatsAndMouses2.uml#_LXoooI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VFl7vI1TEeS-muvgwqy9Mw" name="source">
+        <modelElement href="CatsAndMouses2.uml#_LuzLcY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFl7vY1TEeS-muvgwqy9Mw" name="Object">
+          <modelElement href="CatsAndMouses2.uml#_Lt6aoI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_VFoX8I1TEeS-muvgwqy9Mw" name="DestroyedListener">
+    <modelElement href="CatsAndMouses2.uml#_LXs6EI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VFoX8Y1TEeS-muvgwqy9Mw" position="737.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VFoX8o1TEeS-muvgwqy9Mw" label="+"/>
+    <operations xmi:id="_VFoX841TEeS-muvgwqy9Mw" name="destroyed">
+      <modelElement href="CatsAndMouses2.uml#_Lr954I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFoX9I1TEeS-muvgwqy9Mw" label="+"/>
+      <parameters xmi:id="_VFoX9Y1TEeS-muvgwqy9Mw" name="e">
+        <modelElement href="CatsAndMouses2.uml#_Lr954Y1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFoX9o1TEeS-muvgwqy9Mw" name="DestroyedEvent">
+          <modelElement href="CatsAndMouses2.uml#_LXoooI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_VFsCUI1TEeS-muvgwqy9Mw" name="LapCompletedEvent">
+    <modelElement href="CatsAndMouses2.uml#_LXuIMI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VFsCUY1TEeS-muvgwqy9Mw" position="-955.0,41.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VFsCUo1TEeS-muvgwqy9Mw" label="+"/>
+    <attributes xmi:id="_VFsCU41TEeS-muvgwqy9Mw" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="CatsAndMouses2.uml#_LxwY0I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFsCVI1TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_VFsCVY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VFsCVo1TEeS-muvgwqy9Mw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_VFsCV41TEeS-muvgwqy9Mw" name="LapCompletedEvent">
+      <modelElement href="CatsAndMouses2.uml#_Lu1AoI1TEeS-muvgwqy9Mw"/>
+      <keywords xmi:id="_VFsCWI1TEeS-muvgwqy9Mw" keyword="create"/>
+      <visibility xmi:id="_VFsCWY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VFsCWo1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lu1ApI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFsCW41TEeS-muvgwqy9Mw" name="LapCompletedEvent">
+          <modelElement href="CatsAndMouses2.uml#_LXuIMI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VFsCXI1TEeS-muvgwqy9Mw" name="source">
+        <modelElement href="CatsAndMouses2.uml#_Lu1AoY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFsCXY1TEeS-muvgwqy9Mw" name="Object">
+          <modelElement href="CatsAndMouses2.uml#_Lt6aoI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_VFuekI1TEeS-muvgwqy9Mw" name="LapCompletedListener">
+    <modelElement href="CatsAndMouses2.uml#_LXv9YI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VFuekY1TEeS-muvgwqy9Mw" position="1041.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VFueko1TEeS-muvgwqy9Mw" label="+"/>
+    <operations xmi:id="_VFuek41TEeS-muvgwqy9Mw" name="lapCompleted">
+      <modelElement href="CatsAndMouses2.uml#_LsAWII1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VFuelI1TEeS-muvgwqy9Mw" label="+"/>
+      <parameters xmi:id="_VFuelY1TEeS-muvgwqy9Mw" name="e">
+        <modelElement href="CatsAndMouses2.uml#_LsA9MI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VFuelo1TEeS-muvgwqy9Mw" name="LapCompletedEvent">
+          <modelElement href="CatsAndMouses2.uml#_LXuIMI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_VF0lMI1TEeS-muvgwqy9Mw" name="MineDropEvent" associationsOut="_VFz-II1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_LXxLgI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VF0lMY1TEeS-muvgwqy9Mw" position="-1406.0,22.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VF0lMo1TEeS-muvgwqy9Mw" label="+"/>
+    <attributes xmi:id="_VF0lM41TEeS-muvgwqy9Mw" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="CatsAndMouses2.uml#_Lxw_4I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VF0lNI1TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_VF0lNY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VF0lNo1TEeS-muvgwqy9Mw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_VF0lN41TEeS-muvgwqy9Mw" name="mine">
+      <modelElement href="CatsAndMouses2.uml#_Lxw_4o1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VF0lOI1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VF0lOY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VF0lOo1TEeS-muvgwqy9Mw" name="Mine">
+        <modelElement href="CatsAndMouses2.uml#_LUYgUI1TEeS-muvgwqy9Mw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_VF0lO41TEeS-muvgwqy9Mw" name="MineDropEvent">
+      <modelElement href="CatsAndMouses2.uml#_Lu210I1TEeS-muvgwqy9Mw"/>
+      <keywords xmi:id="_VF0lPI1TEeS-muvgwqy9Mw" keyword="create"/>
+      <visibility xmi:id="_VF0lPY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VF0lPo1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lu3c4o1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VF0lP41TEeS-muvgwqy9Mw" name="MineDropEvent">
+          <modelElement href="CatsAndMouses2.uml#_LXxLgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VF0lQI1TEeS-muvgwqy9Mw" name="source">
+        <modelElement href="CatsAndMouses2.uml#_Lu210Y1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VF0lQY1TEeS-muvgwqy9Mw" name="Object">
+          <modelElement href="CatsAndMouses2.uml#_Lt6aoI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_VF0lQo1TEeS-muvgwqy9Mw" name="mine">
+        <modelElement href="CatsAndMouses2.uml#_Lu210o1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VF0lQ41TEeS-muvgwqy9Mw" name="Mine">
+          <modelElement href="CatsAndMouses2.uml#_LUYgUI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_VF4PkI1TEeS-muvgwqy9Mw" name="MineDropListener">
+    <modelElement href="CatsAndMouses2.uml#_LXznwI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VF4PkY1TEeS-muvgwqy9Mw" position="1379.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VF4Pko1TEeS-muvgwqy9Mw" label="+"/>
+    <operations xmi:id="_VF4Pk41TEeS-muvgwqy9Mw" name="mineDropped">
+      <modelElement href="CatsAndMouses2.uml#_LsCyYI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VF4PlI1TEeS-muvgwqy9Mw" label="+"/>
+      <parameters xmi:id="_VF4PlY1TEeS-muvgwqy9Mw" name="event">
+        <modelElement href="CatsAndMouses2.uml#_LsDZcI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VF4Plo1TEeS-muvgwqy9Mw" name="MineDropEvent">
+          <modelElement href="CatsAndMouses2.uml#_LXxLgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_VF7S4I1TEeS-muvgwqy9Mw" name="MissileFireEvent" associationsOut="_VF6r0I1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_LX014I1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VF7S4Y1TEeS-muvgwqy9Mw" position="1715.0,22.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VF7S4o1TEeS-muvgwqy9Mw" label="+"/>
+    <attributes xmi:id="_VF7S441TEeS-muvgwqy9Mw" defaultValue="1L" name="serialVersionUID" staticAttribute="true">
+      <modelElement href="CatsAndMouses2.uml#_Lxxm8I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VF7S5I1TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_VF7S5Y1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VF7S5o1TEeS-muvgwqy9Mw" name="long">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#long"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_VF7S541TEeS-muvgwqy9Mw" name="missile">
+      <modelElement href="CatsAndMouses2.uml#_Lxxm8o1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VF7S6I1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VF7S6Y1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VF7S6o1TEeS-muvgwqy9Mw" name="Missile">
+        <modelElement href="CatsAndMouses2.uml#_LUgcIY1TEeS-muvgwqy9Mw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_VF7S641TEeS-muvgwqy9Mw" name="MissileFireEvent">
+      <modelElement href="CatsAndMouses2.uml#_Lu4rAI1TEeS-muvgwqy9Mw"/>
+      <keywords xmi:id="_VF7S7I1TEeS-muvgwqy9Mw" keyword="create"/>
+      <visibility xmi:id="_VF7S7Y1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VF7S7o1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lu5SFI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VF7S741TEeS-muvgwqy9Mw" name="MissileFireEvent">
+          <modelElement href="CatsAndMouses2.uml#_LX014I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VF7S8I1TEeS-muvgwqy9Mw" name="source">
+        <modelElement href="CatsAndMouses2.uml#_Lu5SEI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VF7S8Y1TEeS-muvgwqy9Mw" name="Object">
+          <modelElement href="CatsAndMouses2.uml#_Lt6aoI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_VF7S8o1TEeS-muvgwqy9Mw" name="missile">
+        <modelElement href="CatsAndMouses2.uml#_Lu5SEY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VF7S841TEeS-muvgwqy9Mw" name="Missile">
+          <modelElement href="CatsAndMouses2.uml#_LUgcIY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:InterfaceVisual" xmi:id="_VF9vII1TEeS-muvgwqy9Mw" name="MissileFireListener">
+    <modelElement href="CatsAndMouses2.uml#_LX3SII1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VF9vIY1TEeS-muvgwqy9Mw" position="-1708.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VF9vIo1TEeS-muvgwqy9Mw" label="+"/>
+    <operations xmi:id="_VF9vI41TEeS-muvgwqy9Mw" name="missileFired">
+      <modelElement href="CatsAndMouses2.uml#_LsFOoI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VF9vJI1TEeS-muvgwqy9Mw" label="+"/>
+      <parameters xmi:id="_VF9vJY1TEeS-muvgwqy9Mw" name="e">
+        <modelElement href="CatsAndMouses2.uml#_LsF1sI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VF9vJo1TEeS-muvgwqy9Mw" name="MissileFireEvent">
+          <modelElement href="CatsAndMouses2.uml#_LX014I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>

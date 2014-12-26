@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.yattasolutions.uml.diagrams.classifier:ClassDiagram xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.yattasolutions.uml.diagrams.classifier="http://ns.yatta-solutions.com/umllab/diagrams/classifier/1.1.0" xmi:id="_TJrBkI1TEeS-muvgwqy9Mw">
+  <modelElement href="CatsAndMouses2.uml#_LL-yQI1TEeS-muvgwqy9Mw"/>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Vzm4QI1TEeS-muvgwqy9Mw" source="_VzqioI1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_Lz-mYY1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_Vz6aQI1TEeS-muvgwqy9Mw" position="150.0,150.0"/>
+    <stereotypes xmi:id="_Vzotc41TEeS-muvgwqy9Mw" name="Reference">
+      <modelElement href="CatsAndMouses2.uml#_Lz_0gI1TEeS-muvgwqy9Mw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_VzotcI1TEeS-muvgwqy9Mw" text=""/>
+    <sourceRole xmi:id="_VzotcY1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="">
+      <modelElement href="CatsAndMouses2.uml#_Lz-mYo1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzpUhI1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VzpUg41TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_Vzotco1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="p1" navigable="true">
+      <modelElement href="CatsAndMouses2.uml#_Lx6w4I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzpUho1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VzpUhY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_Vzm4QY1TEeS-muvgwqy9Mw" source="_VzqioI1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_L0BCoI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_Vz6aQY1TEeS-muvgwqy9Mw" position="170.0,170.0"/>
+    <stereotypes xmi:id="_Vzotd41TEeS-muvgwqy9Mw" name="Reference">
+      <modelElement href="CatsAndMouses2.uml#_L0BpsI1TEeS-muvgwqy9Mw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_VzotdI1TEeS-muvgwqy9Mw" text=""/>
+    <sourceRole xmi:id="_VzotdY1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="">
+      <modelElement href="CatsAndMouses2.uml#_L0BCoY1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzp7kY1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_Vzp7kI1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_Vzotdo1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="p2" navigable="true">
+      <modelElement href="CatsAndMouses2.uml#_Lx7X8I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzp7k41TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_Vzp7ko1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <edges xsi:type="com.yattasolutions.uml.diagrams.classifier:AssociationVisual" xmi:id="_VznfUI1TEeS-muvgwqy9Mw" source="_VzqioI1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_L0CQwI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_Vz6aQo1TEeS-muvgwqy9Mw" position="190.0,190.0"/>
+    <stereotypes xmi:id="_VzpUgo1TEeS-muvgwqy9Mw" name="Reference">
+      <modelElement href="CatsAndMouses2.uml#_L0C30I1TEeS-muvgwqy9Mw"/>
+    </stereotypes>
+    <nameVisual xmi:id="_VzoteI1TEeS-muvgwqy9Mw" text=""/>
+    <sourceRole xmi:id="_VzpUgI1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="">
+      <modelElement href="CatsAndMouses2.uml#_L0CQwY1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzp7lY1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_Vzp7lI1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </sourceRole>
+    <targetRole xmi:id="_VzpUgY1TEeS-muvgwqy9Mw" aggregationKind="NONE" name="shape" navigable="true">
+      <modelElement href="CatsAndMouses2.uml#_Lx7X8Y1TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_yG8LAI1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_Lx7X8o1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_Vzp7l41TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_Vzp7lo1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+    </targetRole>
+  </edges>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_VzbSEI1TEeS-muvgwqy9Mw" name="Util">
+    <modelElement href="CatsAndMouses2.uml#_LYXocI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VzbSEY1TEeS-muvgwqy9Mw" position="50.0,50.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VzbSEo1TEeS-muvgwqy9Mw" label="+"/>
+    <operations xmi:id="_VzbSE41TEeS-muvgwqy9Mw" name="mod" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_LYY2kI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzbSFI1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VzbSFY1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LYZdoo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSFo1TEeS-muvgwqy9Mw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VzbSF41TEeS-muvgwqy9Mw" name="a">
+        <modelElement href="CatsAndMouses2.uml#_LYZdoI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSGI1TEeS-muvgwqy9Mw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_VzbSGY1TEeS-muvgwqy9Mw" name="b">
+        <modelElement href="CatsAndMouses2.uml#_LYZdoY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSGo1TEeS-muvgwqy9Mw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_VzbSG41TEeS-muvgwqy9Mw" name="getRandom" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_LvvmoI1TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_VzbSHI1TEeS-muvgwqy9Mw" name="TypeParameterDeclaration">
+        <modelElement href="CatsAndMouses2.uml#_Lvvmoo1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_VzbSHY1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_LvvmpI1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_VzbSHo1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VzbSH41TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lvvmo41TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSII1TEeS-muvgwqy9Mw" name="T">
+          <modelElement href="CatsAndMouses2.uml#_LvuYgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VzbSIY1TEeS-muvgwqy9Mw" name="list">
+        <modelElement href="CatsAndMouses2.uml#_LvvmoY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSIo1TEeS-muvgwqy9Mw" name="List">
+          <modelElement href="CatsAndMouses2.uml#_LqprQY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_VzbSI41TEeS-muvgwqy9Mw" name="getRandom" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_Lvw0wI1TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_VzbSJI1TEeS-muvgwqy9Mw" name="TypeParameterDeclaration">
+        <modelElement href="CatsAndMouses2.uml#_Lvw0w41TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_VzbSJY1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_Lvxb0Y1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_VzbSJo1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VzbSJ41TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lvxb0I1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSKI1TEeS-muvgwqy9Mw" name="T">
+          <modelElement href="CatsAndMouses2.uml#_LvuYgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VzbSKY1TEeS-muvgwqy9Mw" name="list">
+        <modelElement href="CatsAndMouses2.uml#_Lvw0wY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSKo1TEeS-muvgwqy9Mw" name="List">
+          <modelElement href="CatsAndMouses2.uml#_LqprQY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_VzbSK41TEeS-muvgwqy9Mw" name="except">
+        <modelElement href="CatsAndMouses2.uml#_Lvw0wo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSLI1TEeS-muvgwqy9Mw" name="Collection">
+          <modelElement href="CatsAndMouses2.uml#_LrvQYI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_VzbSLY1TEeS-muvgwqy9Mw" name="getRandom" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_LvzRAI1TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_VzbSLo1TEeS-muvgwqy9Mw" name="TypeParameterDeclaration">
+        <modelElement href="CatsAndMouses2.uml#_Lvz4Eo1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_VzbSL41TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_Lv0fII1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_VzbSMI1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VzbSMY1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lvz4E41TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSMo1TEeS-muvgwqy9Mw" name="T">
+          <modelElement href="CatsAndMouses2.uml#_LvuYgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VzbSM41TEeS-muvgwqy9Mw" name="coll">
+        <modelElement href="CatsAndMouses2.uml#_Lvz4EI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSNI1TEeS-muvgwqy9Mw" name="Collection">
+          <modelElement href="CatsAndMouses2.uml#_LrvQYI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_VzbSNY1TEeS-muvgwqy9Mw" name="except">
+        <modelElement href="CatsAndMouses2.uml#_Lvz4EY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzbSNo1TEeS-muvgwqy9Mw" name="Collection">
+          <modelElement href="CatsAndMouses2.uml#_LrvQYI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_VzhYsI1TEeS-muvgwqy9Mw" name="CollisionTools">
+    <modelElement href="CatsAndMouses2.uml#_LYb54I1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VzhYsY1TEeS-muvgwqy9Mw" position="472.0,-33.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_VzhYso1TEeS-muvgwqy9Mw" label="+"/>
+    <attributes xmi:id="_VzhYs41TEeS-muvgwqy9Mw" defaultValue="1" name="minLength" staticAttribute="true">
+      <modelElement href="CatsAndMouses2.uml#_Lx5iwI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzhYtI1TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_VzhYtY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VzhYto1TEeS-muvgwqy9Mw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_VzhYt41TEeS-muvgwqy9Mw" defaultValue="Math.toRadians(5)" name="minAngle" staticAttribute="true">
+      <modelElement href="CatsAndMouses2.uml#_Lx6J0Y1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzhYuI1TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_VzhYuY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_VzhYuo1TEeS-muvgwqy9Mw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_VzhYu41TEeS-muvgwqy9Mw" name="getMidPoints" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_Lv2UUI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzhYvI1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VzhYvY1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lv2UUo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzhYvo1TEeS-muvgwqy9Mw" name="Point2D">
+          <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VzhYv41TEeS-muvgwqy9Mw" name="sides">
+        <modelElement href="CatsAndMouses2.uml#_Lv2UUY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzhYwI1TEeS-muvgwqy9Mw" name="List">
+          <modelElement href="CatsAndMouses2.uml#_LqprQY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_VzhYwY1TEeS-muvgwqy9Mw" name="getClosest" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_Lv5XoI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzhYwo1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VzhYw41TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lv5-sI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzhYxI1TEeS-muvgwqy9Mw" name="Point2D">
+          <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VzhYxY1TEeS-muvgwqy9Mw" name="points">
+        <modelElement href="CatsAndMouses2.uml#_Lv5XoY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzhYxo1TEeS-muvgwqy9Mw" name="List">
+          <modelElement href="CatsAndMouses2.uml#_LqprQY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_VzhYx41TEeS-muvgwqy9Mw" name="reference">
+        <modelElement href="CatsAndMouses2.uml#_Lv5Xoo1TEeS-muvgwqy9Mw"/>
+        <keywords xmi:id="_VzhYyI1TEeS-muvgwqy9Mw" keyword="final"/>
+        <type xmi:id="_VzhYyY1TEeS-muvgwqy9Mw" name="Point2D">
+          <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_VzhYyo1TEeS-muvgwqy9Mw" name="getClosestSide" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_Lv8a8I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzhYy41TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VzhYzI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lv9CAo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzhYzY1TEeS-muvgwqy9Mw" name="Side">
+          <modelElement href="CatsAndMouses2.uml#_LYiAgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VzhYzo1TEeS-muvgwqy9Mw" name="sides">
+        <modelElement href="CatsAndMouses2.uml#_Lv9CAI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzhYz41TEeS-muvgwqy9Mw" name="List">
+          <modelElement href="CatsAndMouses2.uml#_LqprQY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_VzhY0I1TEeS-muvgwqy9Mw" name="reference">
+        <modelElement href="CatsAndMouses2.uml#_Lv9CAY1TEeS-muvgwqy9Mw"/>
+        <keywords xmi:id="_VzhY0Y1TEeS-muvgwqy9Mw" keyword="final"/>
+        <type xmi:id="_VzhY0o1TEeS-muvgwqy9Mw" name="Point2D">
+          <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_VzhY041TEeS-muvgwqy9Mw" name="getNormal" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_Lv-3MI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzh_wI1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzh_wY1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_Lv_eQI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_wo1TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzh_w41TEeS-muvgwqy9Mw" name="side">
+        <modelElement href="CatsAndMouses2.uml#_Lv-3MY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_xI1TEeS-muvgwqy9Mw" name="Side">
+          <modelElement href="CatsAndMouses2.uml#_LYiAgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Vzh_xY1TEeS-muvgwqy9Mw" name="side2">
+        <modelElement href="CatsAndMouses2.uml#_Lv-3Mo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_xo1TEeS-muvgwqy9Mw" name="Side">
+          <modelElement href="CatsAndMouses2.uml#_LYiAgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Vzh_x41TEeS-muvgwqy9Mw" name="object">
+        <modelElement href="CatsAndMouses2.uml#_Lv-3M41TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_yI1TEeS-muvgwqy9Mw" name="Shape">
+          <modelElement href="CatsAndMouses2.uml#_Ls2qsI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzh_yY1TEeS-muvgwqy9Mw" name="isRight" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_LwAsYI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzh_yo1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzh_y41TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LwAsY41TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_zI1TEeS-muvgwqy9Mw" name="int">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#int"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzh_zY1TEeS-muvgwqy9Mw" name="line">
+        <modelElement href="CatsAndMouses2.uml#_LwAsYY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_zo1TEeS-muvgwqy9Mw" name="Line2D">
+          <modelElement href="CatsAndMouses2.uml#_LrAQkY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+      <parameters xmi:id="_Vzh_z41TEeS-muvgwqy9Mw" name="c">
+        <modelElement href="CatsAndMouses2.uml#_LwAsYo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_0I1TEeS-muvgwqy9Mw" name="Point2D">
+          <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzh_0Y1TEeS-muvgwqy9Mw" name="getSides" staticOperation="true">
+      <modelElement href="CatsAndMouses2.uml#_LwBTcI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzh_0o1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzh_041TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LwB6gI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_1I1TEeS-muvgwqy9Mw" name="Side">
+          <modelElement href="CatsAndMouses2.uml#_LYiAgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzh_1Y1TEeS-muvgwqy9Mw" name="s">
+        <modelElement href="CatsAndMouses2.uml#_LwBTcY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzh_1o1TEeS-muvgwqy9Mw" name="Shape">
+          <modelElement href="CatsAndMouses2.uml#_Ls2qsI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_VzqioI1TEeS-muvgwqy9Mw" name="Side" associationsOut="_Vzm4QI1TEeS-muvgwqy9Mw _Vzm4QY1TEeS-muvgwqy9Mw _VznfUI1TEeS-muvgwqy9Mw">
+    <modelElement href="CatsAndMouses2.uml#_LYiAgI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_VzqioY1TEeS-muvgwqy9Mw" position="-261.0,-14.0" size="-1.0,-1.0"/>
+    <visibility xmi:id="_Vzqioo1TEeS-muvgwqy9Mw" label="+"/>
+    <attributes xmi:id="_Vzqio41TEeS-muvgwqy9Mw" name="p1">
+      <modelElement href="CatsAndMouses2.uml#_Lx6w4I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzqipI1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VzqipY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_Vzqipo1TEeS-muvgwqy9Mw" name="Point2D">
+        <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_Vzqip41TEeS-muvgwqy9Mw" name="p2">
+      <modelElement href="CatsAndMouses2.uml#_Lx7X8I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzqiqI1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_VzqiqY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_Vzqiqo1TEeS-muvgwqy9Mw" name="Point2D">
+        <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_Vzqiq41TEeS-muvgwqy9Mw" name="shape">
+      <modelElement href="CatsAndMouses2.uml#_Lx7X8Y1TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_Vzp7mI1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_Lx7X8o1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_yHK0gI1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_Lx7X8o1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_VzqirY1TEeS-muvgwqy9Mw" label="-"/>
+      <cardinality xmi:id="_Vzqiro1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_Vzqir41TEeS-muvgwqy9Mw" name="Shape">
+        <modelElement href="CatsAndMouses2.uml#_Ls2qsI1TEeS-muvgwqy9Mw"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_VzqisI1TEeS-muvgwqy9Mw" name="getMidPoint">
+      <modelElement href="CatsAndMouses2.uml#_LYj1sI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzqisY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzqiso1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LwE90I1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzqis41TEeS-muvgwqy9Mw" name="Point2D">
+          <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_VzqitI1TEeS-muvgwqy9Mw" name="toString">
+      <modelElement href="CatsAndMouses2.uml#_LYj1sY1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzqitY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzqito1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LYkcwI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzqit41TEeS-muvgwqy9Mw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_VzqiuI1TEeS-muvgwqy9Mw" name="Side">
+      <modelElement href="CatsAndMouses2.uml#_LwDIoI1TEeS-muvgwqy9Mw"/>
+      <keywords xmi:id="_VzqiuY1TEeS-muvgwqy9Mw" keyword="create"/>
+      <visibility xmi:id="_Vzqiuo1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzqiu41TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LwEWw41TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzqivI1TEeS-muvgwqy9Mw" name="Side">
+          <modelElement href="CatsAndMouses2.uml#_LYiAgI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_VzqivY1TEeS-muvgwqy9Mw" name="side">
+        <modelElement href="CatsAndMouses2.uml#_LwEWwI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzqivo1TEeS-muvgwqy9Mw" name="Shape">
+          <modelElement href="CatsAndMouses2.uml#_Ls2qsI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzqiv41TEeS-muvgwqy9Mw" name="equals">
+      <modelElement href="CatsAndMouses2.uml#_LwFk4I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_VzqiwI1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_VzqiwY1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_LwGL8I1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzqiwo1TEeS-muvgwqy9Mw" name="boolean">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#boolean"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzqiw41TEeS-muvgwqy9Mw" name="other">
+        <modelElement href="CatsAndMouses2.uml#_LwFk4Y1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_VzqixI1TEeS-muvgwqy9Mw" name="Object">
+          <modelElement href="CatsAndMouses2.uml#_Lt6aoI1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_Vzx3YI1TEeS-muvgwqy9Mw" name="Vector2D" abstractClass="true">
+    <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_Vzx3YY1TEeS-muvgwqy9Mw" position="-623.0,-183.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_Vzx3Yo1TEeS-muvgwqy9Mw" name="Patch">
+      <modelElement href="CatsAndMouses2.uml#_TIrjEI1TEeS-muvgwqy9Mw"/>
+    </stereotypes>
+    <visibility xmi:id="_Vzx3Y41TEeS-muvgwqy9Mw" label="+"/>
+    <attributes xmi:id="_Vzx3ZI1TEeS-muvgwqy9Mw" name="direction">
+      <modelElement href="CatsAndMouses2.uml#_NXgOoI1TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_Vzx3ZY1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_NXgOoY1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_Vzx3Zo1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_Vzx3Z41TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_Vzx3aI1TEeS-muvgwqy9Mw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_Vzx3aY1TEeS-muvgwqy9Mw" name="magnitude">
+      <modelElement href="CatsAndMouses2.uml#_NXg1so1TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_Vzx3ao1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_NXhcwI1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_Vzx3a41TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_Vzx3bI1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_Vzx3bY1TEeS-muvgwqy9Mw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_Vzx3bo1TEeS-muvgwqy9Mw" name="x">
+      <modelElement href="CatsAndMouses2.uml#_NXhcw41TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_Vzx3b41TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_NXiD0I1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_Vzx3cI1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_Vzx3cY1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_Vzx3co1TEeS-muvgwqy9Mw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <attributes xmi:id="_Vzx3c41TEeS-muvgwqy9Mw" name="y">
+      <modelElement href="CatsAndMouses2.uml#_NXiD041TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_Vzx3dI1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_NXiq4I1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_Vzx3dY1TEeS-muvgwqy9Mw" label="+"/>
+      <cardinality xmi:id="_Vzx3do1TEeS-muvgwqy9Mw" label="1" max="1" min="1"/>
+      <type xmi:id="_Vzx3d41TEeS-muvgwqy9Mw" name="double">
+        <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+      </type>
+    </attributes>
+    <operations xmi:id="_Vzx3eI1TEeS-muvgwqy9Mw" name="Vector2D">
+      <modelElement href="CatsAndMouses2.uml#_NM9ykI1TEeS-muvgwqy9Mw"/>
+      <keywords xmi:id="_Vzx3eY1TEeS-muvgwqy9Mw" keyword="create"/>
+      <stereotypes xmi:id="_Vzx3eo1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_NO2B4I1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_Vzx3e41TEeS-muvgwqy9Mw" label="#"/>
+      <outParameters xmi:id="_Vzx3fI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NM-Zoo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3fY1TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_Vzx3fo1TEeS-muvgwqy9Mw" abstractOperation="true" name="add">
+      <modelElement href="CatsAndMouses2.uml#_NM-Zo41TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3f41TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3gI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NM_AsI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3gY1TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzx3go1TEeS-muvgwqy9Mw" name="other">
+        <modelElement href="CatsAndMouses2.uml#_NM-ZpI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3g41TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzx3hI1TEeS-muvgwqy9Mw" name="angleBetween">
+      <modelElement href="CatsAndMouses2.uml#_NM_AsY1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3hY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3ho1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NQGmII1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3h41TEeS-muvgwqy9Mw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzx3iI1TEeS-muvgwqy9Mw" name="other">
+        <modelElement href="CatsAndMouses2.uml#_NM_Aso1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3iY1TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzx3io1TEeS-muvgwqy9Mw" name="applyTo">
+      <modelElement href="CatsAndMouses2.uml#_NM_As41TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3i41TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3jI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NM_nwI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3jY1TEeS-muvgwqy9Mw" name="Point2D">
+          <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzx3jo1TEeS-muvgwqy9Mw" name="what">
+        <modelElement href="CatsAndMouses2.uml#_NM_AtI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3j41TEeS-muvgwqy9Mw" name="Point2D">
+          <modelElement href="CatsAndMouses2.uml#_LqSe4I1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzx3kI1TEeS-muvgwqy9Mw" abstractOperation="true" name="dotProduct">
+      <modelElement href="CatsAndMouses2.uml#_NM_nwY1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3kY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3ko1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NQGmIY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3k41TEeS-muvgwqy9Mw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzx3lI1TEeS-muvgwqy9Mw" name="other">
+        <modelElement href="CatsAndMouses2.uml#_NM_nwo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3lY1TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzx3lo1TEeS-muvgwqy9Mw" abstractOperation="true" name="getSquareMagnitude">
+      <modelElement href="CatsAndMouses2.uml#_NM_nw41TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3l41TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3mI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NQGmIo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3mY1TEeS-muvgwqy9Mw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_Vzx3mo1TEeS-muvgwqy9Mw" name="normalize">
+      <modelElement href="CatsAndMouses2.uml#_NNAO0I1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3m41TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3nI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NNAO0Y1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3nY1TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_Vzx3no1TEeS-muvgwqy9Mw" abstractOperation="true" name="subtract">
+      <modelElement href="CatsAndMouses2.uml#_NNAO0o1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3n41TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3oI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NNA14I1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3oY1TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzx3oo1TEeS-muvgwqy9Mw" name="other">
+        <modelElement href="CatsAndMouses2.uml#_NNAO041TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3o41TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzx3pI1TEeS-muvgwqy9Mw" name="toString">
+      <modelElement href="CatsAndMouses2.uml#_NNA14Y1TEeS-muvgwqy9Mw"/>
+      <stereotypes xmi:id="_Vzx3pY1TEeS-muvgwqy9Mw" name="Annotations">
+        <modelElement href="CatsAndMouses2.uml#_NNA14o1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <stereotypes xmi:id="_Vzx3po1TEeS-muvgwqy9Mw" name="LegacyStyledElement">
+        <modelElement href="CatsAndMouses2.uml#_NO33EI1TEeS-muvgwqy9Mw"/>
+      </stereotypes>
+      <visibility xmi:id="_Vzx3p41TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3qI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NQH0RI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3qY1TEeS-muvgwqy9Mw" name="String">
+          <modelElement href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </type>
+      </outParameters>
+    </operations>
+    <operations xmi:id="_Vzx3qo1TEeS-muvgwqy9Mw" abstractOperation="true" name="rotate">
+      <modelElement href="CatsAndMouses2.uml#_NQHNMI1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3q41TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3rI1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NQH0QI1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3rY1TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzx3ro1TEeS-muvgwqy9Mw" name="theta">
+        <modelElement href="CatsAndMouses2.uml#_NQHNMY1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3r41TEeS-muvgwqy9Mw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+    </operations>
+    <operations xmi:id="_Vzx3sI1TEeS-muvgwqy9Mw" abstractOperation="true" name="scale">
+      <modelElement href="CatsAndMouses2.uml#_NQH0QY1TEeS-muvgwqy9Mw"/>
+      <visibility xmi:id="_Vzx3sY1TEeS-muvgwqy9Mw" label="+"/>
+      <outParameters xmi:id="_Vzx3so1TEeS-muvgwqy9Mw">
+        <modelElement href="CatsAndMouses2.uml#_NQH0Q41TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3s41TEeS-muvgwqy9Mw" name="Vector2D">
+          <modelElement href="CatsAndMouses2.uml#_LqTtAY1TEeS-muvgwqy9Mw"/>
+        </type>
+      </outParameters>
+      <parameters xmi:id="_Vzx3tI1TEeS-muvgwqy9Mw" name="factor">
+        <modelElement href="CatsAndMouses2.uml#_NQH0Qo1TEeS-muvgwqy9Mw"/>
+        <type xmi:id="_Vzx3tY1TEeS-muvgwqy9Mw" name="double">
+          <modelElement href="pathmap://UML_LIBRARIES/JavaPrimitiveTypes.library.uml#double"/>
+        </type>
+      </parameters>
+    </operations>
+  </nodes>
+  <nodes xsi:type="com.yattasolutions.uml.diagrams.classifier:ClassifierVisual" xmi:id="_Vz5MII1TEeS-muvgwqy9Mw" name="T">
+    <modelElement href="CatsAndMouses2.uml#_LvuYgI1TEeS-muvgwqy9Mw"/>
+    <visualProperties xmi:id="_Vz5MIY1TEeS-muvgwqy9Mw" position="919.0,117.0" size="-1.0,-1.0"/>
+    <stereotypes xmi:id="_Vz5MIo1TEeS-muvgwqy9Mw" name="Reference">
+      <modelElement href="CatsAndMouses2.uml#_Lvu_kI1TEeS-muvgwqy9Mw"/>
+    </stereotypes>
+    <visibility xmi:id="_Vz5MI41TEeS-muvgwqy9Mw" label="+"/>
+  </nodes>
+</com.yattasolutions.uml.diagrams.classifier:ClassDiagram>
