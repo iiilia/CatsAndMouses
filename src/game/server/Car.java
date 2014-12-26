@@ -30,49 +30,54 @@ public class Car extends GameObject implements Collides {
     public static final double      turningSpeed       = .35 * Math.PI;
 
     public static final double      collisionCooldown  = .5;
+    /**
+     * Отскок при столкновении
+     */
     public static final double      collisionRepulsion = 40;
+    /**
+     * Угол поворота при столкновении
+     */
     public static final double      collisionRotation  = Math.toRadians(15);
 
     /**
-     * The hitbox of the car when facing positive x
+     * Описанный прямоугольник, при движении машины по X
      */
     public static final Rectangle2D hitbox             = new Rectangle2D.Double(0, 0, 60, 45);
 
     /**
-     * Minimum speed in units/second the car must have for full turning speed
+     * Минимальная скорость машины для выполнения поворота
      */
     public static final double      minSpeed           = 50;
 
     private static final double     epsilon            = 10e-5;
 
     /**
-     * 0	not accelerating
-     * 1	forward
-     * 2	backward
+     * 0	нет ускорения
+     * 1	ускорение
+     * 2	торможение
      */
     private int                     accelerating;
     /**
-     * boost duration
-     * positive y boost
-     * otherwise <0 
+     * продолжительность boost
+     * <0 если нет boost'a
      */
     private double                  boost;
     /**
-     * cooldown for car to car collision
+     * "остановка" при столкновении двух машин
      */
     private double                  cooldown;
     /**
-     * direction of the car in Polar coordinates
+     * направление машины (в полярных координатах)
      */
     private double                  facing;
     /**
-     * mine hold duration
+     * продолжительность остановки при попадании на препятствие
      */
     private double                  mine;
     /**
-     * 0	not turning
-     * >0	turninng right
-     * <0	turning left
+     * 0	нет поворота
+     * >0	поворот направо
+     * <0	поворот налево
      */
     private int                     turning;
 
@@ -128,7 +133,11 @@ public class Car extends GameObject implements Collides {
                 facingVector.applyTo(getLocation()));
         turndir *= CollisionTools.isRight(facingLine, center);
 
-        // turn the car, but only if that doesn't cause another collision
+        
+        /* поменять направление движения машины
+         * если только это не вызовет следующего столкновения
+         */
+        
         double oldFacing = facing;
         facing += turndir * collisionRotation;
         test = getArea();
@@ -137,11 +146,11 @@ public class Car extends GameObject implements Collides {
             facing = oldFacing;
         }
 
-        // brake the car
+        // снизить скорость при повороте
         setSpeed(getSpeed().scale(
                 Math.abs(Math.sin(getSpeed().angleBetween(fromCenter)))));
 
-        // bounce
+        // изменить направление скорости при отскоке
         setSpeed(getSpeed().add(
                 new Vector2D.Polar(bounceDirection, collisionRepulsion)));
     }
@@ -154,6 +163,8 @@ public class Car extends GameObject implements Collides {
         return accelerating;
     }
 
+    
+    //получить описанный прямоугольник в правильном положении (поворот + координаты)
     @Override
     public Area getArea() {
         Area res = new Area(hitbox);
@@ -234,14 +245,14 @@ public class Car extends GameObject implements Collides {
 
         Vector2D accel = new Vector2D.Cartesian(0, 0);
 
-        // car acceleration
+        // ускорение машины
         if (isBoosting()) {
             accel = accel.add(new Vector2D.Polar(facing, boostAcceleration));
         } else if (accelerating > 0) {
             accel = accel.add(new Vector2D.Polar(facing, acceleration));
         }
 
-        // friction and drag
+        // торможение (из-за трения)
         if (getSpeed().getSquareMagnitude() > epsilon * epsilon) {
             double angle = facing - getSpeed().getDirection();
             double magnitude = Math.abs(Math.sin(angle))
@@ -290,9 +301,9 @@ public class Car extends GameObject implements Collides {
         double otherspeed = other.getSpeed().getMagnitude();
         double fasterspeed = Math.max(onespeed, otherspeed);
         double slowerspeed = Math.min(onespeed, otherspeed);
-        // if the cars are headed towards each other - add the speeds
-        // if they are going the same way - subtract
-        // if they are going perpendicular to each other, take the faster one
+        // если машины движутся навстречу - сложить скорости
+        // если в одном направлении - вычесть скорости
+        // если перпендикулярно - оставить бОльшую скорость
         double speedDiff = fasterspeed
                 - Math.cos(one.getSpeed().angleBetween(other.getSpeed())) * slowerspeed;
         Vector2D ab = new Vector2D.Polar(new Vector2D.Cartesian(
