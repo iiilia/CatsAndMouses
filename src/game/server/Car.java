@@ -20,6 +20,7 @@ public class Car extends GameObject implements Collides {
     public static final double      frontFriction      = 100;
 
     public static final double      acceleration       = 140 + frontFriction;
+    
     public static final double      boostAcceleration  = acceleration * 3;
     public static final double      topSpeed           = 200;
     public static final double      boostSpeed         = topSpeed * 2;
@@ -32,14 +33,11 @@ public class Car extends GameObject implements Collides {
     public static final double      collisionRepulsion = 40;
     public static final double      collisionRotation  = Math.toRadians(15);
 
-    public static final double      damageThreshHold   = 90;
-
     /**
      * The hitbox of the car when facing positive x
      */
     public static final Rectangle2D hitbox             = new Rectangle2D.Double(0, 0, 60, 45);
 
-    public static final int         maxHP              = 6;
     /**
      * Minimum speed in units/second the car must have for full turning speed
      */
@@ -47,43 +45,36 @@ public class Car extends GameObject implements Collides {
 
     private static final double     epsilon            = 10e-5;
 
-    private int                     accelerating;                                             // 0
-                                                                                               // not
-                                                                                               // accelerating,
-                                                                                               // 1
-                                                                                               // forward,
-                                                                                               // 2
-                                                                                               // backward
-    private double                  boost;                                                    // boost
-                                                                                               // duration
-                                                                                               // positive
-                                                                                               // y,
-                                                                                               // <
-                                                                                               // 0
-                                                                                               // the
-                                                                                               // other
-                                                                                               // way
-    private double                  cooldown;                                                 // cooldown
-                                                                                               // for
-                                                                                               // car/car
-                                                                                               // collision
+    /**
+     * 0	not accelerating
+     * 1	forward
+     * 2	backward
+     */
+    private int                     accelerating;
+    /**
+     * boost duration
+     * positive y boost
+     * otherwise <0 
+     */
+    private double                  boost;
+    /**
+     * cooldown for car to car collision
+     */
+    private double                  cooldown;
+    /**
+     * direction of the car in Polar coordinates
+     */
     private double                  facing;
-    private int                     hp;
-    private double                  mine;                                                     // mine
-                                                                                               // stun
-                                                                                               // duration
-
-    private int                     turning;                                                  // 0
-                                                                                               // -
-                                                                                               // not
-                                                                                               // turning,
-                                                                                               // >
-                                                                                               // 0
-                                                                                               // turning
-                                                                                               // from
-                                                                                               // positive
-                                                                                               // x
-                                                                                               // to
+    /**
+     * mine hold duration
+     */
+    private double                  mine;
+    /**
+     * 0	not turning
+     * >0	turninng right
+     * <0	turning left
+     */
+    private int                     turning;
 
     public Car() {
         this(new Point(), 0);
@@ -99,7 +90,6 @@ public class Car extends GameObject implements Collides {
         accelerating = 0;
         turning = 0;
         cooldown = 0;
-        hp = maxHP;
         boost = 0;
         mine = 0;
     }
@@ -156,14 +146,8 @@ public class Car extends GameObject implements Collides {
                 new Vector2D.Polar(bounceDirection, collisionRepulsion)));
     }
 
-    public boolean damage(int damage) {
-        hp -= damage;
-        if (hp <= 0) {
-            stopTurning();
+    public void damage(int damage) {
             setAccelerating(0);
-            destroy();
-        }
-        return hp <= 0;
     }
 
     public int getAccelerating() {
@@ -183,10 +167,6 @@ public class Car extends GameObject implements Collides {
 
     public double getFacing() {
         return facing;
-    }
-
-    public int getHP() {
-        return hp;
     }
 
     public Point getIntLocation() {
@@ -294,7 +274,6 @@ public class Car extends GameObject implements Collides {
     public JSONObject toJSON() {
         JSONObject result = super.toJSON();
         result.put("message", "car");
-        result.put("hp", getHP());
         result.put("facing", getFacing());
         result.put("accelerating", getAccelerating() == 1);
         result.put("turning", getTurning());
@@ -313,7 +292,7 @@ public class Car extends GameObject implements Collides {
         double slowerspeed = Math.min(onespeed, otherspeed);
         // if the cars are headed towards each other - add the speeds
         // if they are going the same way - subtract
-        // if they are going perpendicular to eacth other, take the faster one
+        // if they are going perpendicular to each other, take the faster one
         double speedDiff = fasterspeed
                 - Math.cos(one.getSpeed().angleBetween(other.getSpeed())) * slowerspeed;
         Vector2D ab = new Vector2D.Polar(new Vector2D.Cartesian(
@@ -321,12 +300,5 @@ public class Car extends GameObject implements Collides {
                 speedDiff);
         one.setSpeed(one.getSpeed().subtract(ab));
         other.setSpeed(other.getSpeed().add(ab));
-        if (speedDiff > damageThreshHold) {
-            if (fasterspeed == onespeed) {
-                other.damage((int) (speedDiff / damageThreshHold));
-            } else {
-                one.damage((int) (speedDiff / damageThreshHold));
-            }
-        }
     }
 }
