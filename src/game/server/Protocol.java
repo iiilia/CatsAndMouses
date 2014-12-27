@@ -45,10 +45,8 @@ public class Protocol {
         constants.put("missile.hitbox.height", Missile.hitbox.getHeight());
         constants.put("missile.speed", Missile.speed);
         constants.put("missile.range", Missile.range);
-        constants.put("missile.damage", Missile.damage);
         constants.put("mine.hitbox.width", Mine.hitbox.getWidth());
         constants.put("mine.hitbox.height", Mine.hitbox.getHeight());
-        constants.put("mine.damage", Mine.damage);
         constants.put("mine.stuntime", Mine.disableDuration);
         constants.put("player.maxmissiles", Player.maxMissiles);
         constants.put("player.maxboosts", Player.maxBoosts);

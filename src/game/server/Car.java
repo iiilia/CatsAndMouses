@@ -31,53 +31,53 @@ public class Car extends GameObject implements Collides {
 
     public static final double      collisionCooldown  = .5;
     /**
-     * Отскок при столкновении
+     * РћС‚СЃРєРѕРє РїСЂРё СЃС‚РѕР»РєРЅРѕРІРµРЅРёРё
      */
     public static final double      collisionRepulsion = 40;
     /**
-     * Угол поворота при столкновении
+     * РЈРіРѕР» РїРѕРІРѕСЂРѕС‚Р° РїСЂРё СЃС‚РѕР»РєРЅРѕРІРµРЅРёРё
      */
     public static final double      collisionRotation  = Math.toRadians(15);
 
     /**
-     * Описанный прямоугольник, при движении машины по X
+     * РћРїРёСЃР°РЅРЅС‹Р№ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє, РїСЂРё РґРІРёР¶РµРЅРёРё РјР°С€РёРЅС‹ РїРѕ X
      */
     public static final Rectangle2D hitbox             = new Rectangle2D.Double(0, 0, 60, 45);
 
     /**
-     * Минимальная скорость машины для выполнения поворота
+     * РњРёРЅРёРјР°Р»СЊРЅР°СЏ СЃРєРѕСЂРѕСЃС‚СЊ РјР°С€РёРЅС‹ РґР»СЏ РІС‹РїРѕР»РЅРµРЅРёСЏ РїРѕРІРѕСЂРѕС‚Р°
      */
     public static final double      minSpeed           = 50;
 
     private static final double     epsilon            = 10e-5;
 
     /**
-     * 0	нет ускорения
-     * 1	ускорение
-     * 2	торможение
+     * 0	РЅРµС‚ СѓСЃРєРѕСЂРµРЅРёСЏ
+     * 1	СѓСЃРєРѕСЂРµРЅРёРµ
+     * 2	С‚РѕСЂРјРѕР¶РµРЅРёРµ
      */
     private int                     accelerating;
     /**
-     * продолжительность boost
-     * <0 если нет boost'a
+     * РїСЂРѕРґРѕР»Р¶РёС‚РµР»СЊРЅРѕСЃС‚СЊ boost
+     * <0 РµСЃР»Рё РЅРµС‚ boost'a
      */
     private double                  boost;
     /**
-     * "остановка" при столкновении двух машин
+     * "РѕСЃС‚Р°РЅРѕРІРєР°" РїСЂРё СЃС‚РѕР»РєРЅРѕРІРµРЅРёРё РґРІСѓС… РјР°С€РёРЅ
      */
     private double                  cooldown;
     /**
-     * направление машины (в полярных координатах)
+     * РЅР°РїСЂР°РІР»РµРЅРёРµ РјР°С€РёРЅС‹ (РІ РїРѕР»СЏСЂРЅС‹С… РєРѕРѕСЂРґРёРЅР°С‚Р°С…)
      */
     private double                  facing;
     /**
-     * продолжительность остановки при попадании на препятствие
+     * РїСЂРѕРґРѕР»Р¶РёС‚РµР»СЊРЅРѕСЃС‚СЊ РѕСЃС‚Р°РЅРѕРІРєРё РїСЂРё РїРѕРїР°РґР°РЅРёРё РЅР° РїСЂРµРїСЏС‚СЃС‚РІРёРµ
      */
     private double                  mine;
     /**
-     * 0	нет поворота
-     * >0	поворот направо
-     * <0	поворот налево
+     * 0	РЅРµС‚ РїРѕРІРѕСЂРѕС‚Р°
+     * >0	РїРѕРІРѕСЂРѕС‚ РЅР°РїСЂР°РІРѕ
+     * <0	РїРѕРІРѕСЂРѕС‚ РЅР°Р»РµРІРѕ
      */
     private int                     turning;
 
@@ -134,8 +134,8 @@ public class Car extends GameObject implements Collides {
         turndir *= CollisionTools.isRight(facingLine, center);
 
         
-        /* поменять направление движения машины
-         * если только это не вызовет следующего столкновения
+        /* РїРѕРјРµРЅСЏС‚СЊ РЅР°РїСЂР°РІР»РµРЅРёРµ РґРІРёР¶РµРЅРёСЏ РјР°С€РёРЅС‹
+         * РµСЃР»Рё С‚РѕР»СЊРєРѕ СЌС‚Рѕ РЅРµ РІС‹Р·РѕРІРµС‚ СЃР»РµРґСѓСЋС‰РµРіРѕ СЃС‚РѕР»РєРЅРѕРІРµРЅРёСЏ
          */
         
         double oldFacing = facing;
@@ -146,16 +146,16 @@ public class Car extends GameObject implements Collides {
             facing = oldFacing;
         }
 
-        // снизить скорость при повороте
+        // СЃРЅРёР·РёС‚СЊ СЃРєРѕСЂРѕСЃС‚СЊ РїСЂРё РїРѕРІРѕСЂРѕС‚Рµ
         setSpeed(getSpeed().scale(
                 Math.abs(Math.sin(getSpeed().angleBetween(fromCenter)))));
 
-        // изменить направление скорости при отскоке
+        // РёР·РјРµРЅРёС‚СЊ РЅР°РїСЂР°РІР»РµРЅРёРµ СЃРєРѕСЂРѕСЃС‚Рё РїСЂРё РѕС‚СЃРєРѕРєРµ
         setSpeed(getSpeed().add(
                 new Vector2D.Polar(bounceDirection, collisionRepulsion)));
     }
 
-    public void damage(int damage) {
+    public void damage() {
             setAccelerating(0);
     }
 
@@ -164,7 +164,7 @@ public class Car extends GameObject implements Collides {
     }
 
     
-    //получить описанный прямоугольник в правильном положении (поворот + координаты)
+    //РїРѕР»СѓС‡РёС‚СЊ РѕРїРёСЃР°РЅРЅС‹Р№ РїСЂСЏРјРѕСѓРіРѕР»СЊРЅРёРє РІ РїСЂР°РІРёР»СЊРЅРѕРј РїРѕР»РѕР¶РµРЅРёРё (РїРѕРІРѕСЂРѕС‚ + РєРѕРѕСЂРґРёРЅР°С‚С‹)
     @Override
     public Area getArea() {
         Area res = new Area(hitbox);
@@ -245,14 +245,14 @@ public class Car extends GameObject implements Collides {
 
         Vector2D accel = new Vector2D.Cartesian(0, 0);
 
-        // ускорение машины
+        // СѓСЃРєРѕСЂРµРЅРёРµ РјР°С€РёРЅС‹
         if (isBoosting()) {
             accel = accel.add(new Vector2D.Polar(facing, boostAcceleration));
         } else if (accelerating > 0) {
             accel = accel.add(new Vector2D.Polar(facing, acceleration));
         }
 
-        // торможение (из-за трения)
+        // С‚РѕСЂРјРѕР¶РµРЅРёРµ (РёР·-Р·Р° С‚СЂРµРЅРёСЏ)
         if (getSpeed().getSquareMagnitude() > epsilon * epsilon) {
             double angle = facing - getSpeed().getDirection();
             double magnitude = Math.abs(Math.sin(angle))
@@ -301,9 +301,9 @@ public class Car extends GameObject implements Collides {
         double otherspeed = other.getSpeed().getMagnitude();
         double fasterspeed = Math.max(onespeed, otherspeed);
         double slowerspeed = Math.min(onespeed, otherspeed);
-        // если машины движутся навстречу - сложить скорости
-        // если в одном направлении - вычесть скорости
-        // если перпендикулярно - оставить бОльшую скорость
+        // РµСЃР»Рё РјР°С€РёРЅС‹ РґРІРёР¶СѓС‚СЃСЏ РЅР°РІСЃС‚СЂРµС‡Сѓ - СЃР»РѕР¶РёС‚СЊ СЃРєРѕСЂРѕСЃС‚Рё
+        // РµСЃР»Рё РІ РѕРґРЅРѕРј РЅР°РїСЂР°РІР»РµРЅРёРё - РІС‹С‡РµСЃС‚СЊ СЃРєРѕСЂРѕСЃС‚Рё
+        // РµСЃР»Рё РїРµСЂРїРµРЅРґРёРєСѓР»СЏСЂРЅРѕ - РѕСЃС‚Р°РІРёС‚СЊ Р±РћР»СЊС€СѓСЋ СЃРєРѕСЂРѕСЃС‚СЊ
         double speedDiff = fasterspeed
                 - Math.cos(one.getSpeed().angleBetween(other.getSpeed())) * slowerspeed;
         Vector2D ab = new Vector2D.Polar(new Vector2D.Cartesian(

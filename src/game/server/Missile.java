@@ -12,7 +12,6 @@ import game.util.Vector2D;
 public class Missile extends GameObject implements Collides {
 	public static final int range = 1000;
 	public static final double speed = 600;
-	public static final int damage = 2;
 	public static final Rectangle hitbox = new Rectangle(20, 8);
 
 	private Player shooter;
@@ -35,7 +34,7 @@ public class Missile extends GameObject implements Collides {
 
 	public void collideWith(Car other) {
 		if (other != shooter.getCar()) {
-			other.damage(damage);
+			other.damage();
 			destroy();
 		}
 	}

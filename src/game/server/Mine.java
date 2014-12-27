@@ -11,7 +11,6 @@ import game.util.Vector2D;
 
 public class Mine extends GameObject implements Collides {
 
-	public static final int damage = 1;
 	public static final Ellipse2D hitbox = new Ellipse2D.Double(0, 0, 20, 20);
 	public static final double disableDuration = .5;
 
@@ -21,7 +20,7 @@ public class Mine extends GameObject implements Collides {
 
 	public void collideWith(Car other) {
 	    other.mine();
-		other.damage(damage);
+		other.damage();
 		destroy();
 	}
 
