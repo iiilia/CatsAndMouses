@@ -32,8 +32,6 @@ public class Player implements JSONable {
     private int               missiles;
     private int               boosts;
     private int               mines;
-    private RaceCharacter     preferredCharacter;
-    private RaceCharacter     character;
     private CarType           carType;
     private boolean           tiledMap;
     
@@ -45,7 +43,6 @@ public class Player implements JSONable {
     
     public Player(boolean tiledMap) {
         name = null;
-        preferredCharacter = null;
         carType = null;
         checkPoints = null;
         car = null;
@@ -57,15 +54,13 @@ public class Player implements JSONable {
         mines = -1;
     }
     
-    public Player(String name, RaceCharacter raceCharacter, CarType carType) {
-        this(name, raceCharacter, carType, false);
+    public Player(String name, CarType carType) {
+        this(name, carType, false);
     }
     
-    public Player(String name, RaceCharacter raceCharacter, CarType carType,
+    public Player(String name, CarType carType,
             boolean tiledMap) {
         this.name = name;
-        preferredCharacter = raceCharacter;
-        character = null;
         this.carType = carType;
         checkPoints = new ArrayList<>();
         car = null;
@@ -218,7 +213,6 @@ public class Player implements JSONable {
     	boosts = maxBoosts;
     	mines = maxMines;
     	setCar(null);
-    	character = null;
     }
     
     public int getMines() {
@@ -231,18 +225,6 @@ public class Player implements JSONable {
     
     public int getBoosts() {
         return boosts;
-    }
-    
-    public RaceCharacter getPreferredCharacter() {
-        return preferredCharacter;
-    }
-    
-    public RaceCharacter getCharacter() {
-        return character;
-    }
-    
-    public void setCharacter(RaceCharacter character) {
-        this.character = character;
     }
     
     public CarType getCarType() {
@@ -302,11 +284,7 @@ public class Player implements JSONable {
         if (isObserver()) {
             return "Observer";
         }
-        RaceCharacter ch = character;
-        if (ch == null) {
-            ch = preferredCharacter;
-        }
-        return name + "(" + ch.getName() + "), in a " + carType.getName();
+        return name + carType.getName();
     }
     
     @Override
@@ -314,11 +292,6 @@ public class Player implements JSONable {
         JSONObject message = new JSONObject();
         message.put("message", "player");
         message.put("name", name);
-        RaceCharacter ch = character;
-        if (ch == null) {
-            ch = preferredCharacter;
-        }
-        message.put("character", ch.getName());
         message.put("cartype", carType.getName());
         return message;
     }

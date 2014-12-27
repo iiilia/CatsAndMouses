@@ -4,7 +4,6 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.net.ServerSocket;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -17,7 +16,6 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import game.server.tracktiles.TrackTile;
-import game.util.Util;
 
 public class Protocol {
 
@@ -327,16 +325,6 @@ public class Protocol {
                 return null;
             }
 
-            String character = getString(object, "character");
-            if (character == null) {
-                return null;
-            }
-            RaceCharacter charac = RaceCharacter.getFromName(character);
-            if (charac == null) {
-                err.println("Unknown character: " + character);
-                return null;
-            }
-
             String ctype = getString(object, "cartype");
             if (ctype == null) {
                 err.println("No cartype field");
@@ -354,7 +342,7 @@ public class Protocol {
             } catch (JSONException e) {
 
             }
-            Player player = new Player(name, charac, carType, tiledMap);
+            Player player = new Player(name, carType, tiledMap);
             Protocol.log(this, "Handshake successful for new Player: " + player.toString());
             err.println(successfulHandshake.toString());
             return player;
@@ -405,18 +393,6 @@ public class Protocol {
             racers.add(playerQueue.poll());
         }
 
-        // Assign Characters
-        List<RaceCharacter> characters = new ArrayList<>(Arrays.asList(RaceCharacter.values()));
-        for (Player player : racers) {
-            if (characters.contains(player.getPreferredCharacter())) {
-                player.setCharacter(player.getPreferredCharacter());
-                characters.remove(player.getPreferredCharacter());
-            } else {
-                RaceCharacter character = Util.getRandom(characters);
-                player.setCharacter(character);
-                characters.remove(character);
-            }
-        }
         game.startPreRace(racers);
     }
 
