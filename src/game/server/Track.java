@@ -39,6 +39,7 @@ public class Track implements Collides, JSONable {
 
     private Area             track;
 
+    
     public Track(Direction startDir, List<TrackTile> tiles) {
         this(startDir, convert(tiles));
     }
@@ -151,6 +152,11 @@ public class Track implements Collides, JSONable {
         return obj;
     }
 
+    /**
+     * карочи, здесь, как я поняла, происходит загрузка карты,
+     * ее отрисовка, установка положения старта и финиша
+     * 
+     */
     private void bake() {
         track = new Area();
         for (TrackTile t : tiles) {
@@ -182,6 +188,13 @@ public class Track implements Collides, JSONable {
         g.fill(finishLine.getArea());
         g.dispose();
     }
+    
+    /**
+     * отрисовка сегментов карты, положение областей относительно
+     * друг друга
+     * innerArea - внутренняя область (дорожка наша)
+     * outerArea - внешняя область
+     */
 
     private void makeNegative() {
         PathIterator iterator = track.getPathIterator(null);
