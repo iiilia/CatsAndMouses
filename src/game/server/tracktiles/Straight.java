@@ -18,6 +18,11 @@ public class Straight extends TrackTile {
 		super(orientation);
 	}
 
+	/**
+	 * получить площадь прямоугольника в вертикальном направлении,
+	 * если направление Up и Down
+	 * иначе - горизонтальное
+	 */
 	@Override
 	public Area getArea() {
 		int x = getLocation().x;
@@ -33,11 +38,20 @@ public class Straight extends TrackTile {
 		return new Area(rect);
 	}
 
+	/**
+	 * проверить ориентацию
+	 */
 	@Override
 	public boolean checkDirection(Direction direction) {
 		return direction == getOrientation();
 	}
 
+	/**
+	 * получить относительное положение
+	 * если ориентация карты совпадает с вертикальным направлением, 
+	 * то перемещаем точку вверх на SEGMENT_LENGTH * 3
+	 * с горизонтальным на SEGMENT_LENGTH * 3
+	 */
 	@Override
 	public Point getRelativeConnect(Direction direction) {
 		if (!checkDirection(direction)) {

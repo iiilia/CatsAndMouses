@@ -17,6 +17,7 @@ public abstract class TrackTile implements JSONable {
 	private Point location;
 	private Direction orientation;
 
+	
 	protected TrackTile(Direction orientation) {
 		this.orientation = orientation;
 	}
@@ -27,22 +28,36 @@ public abstract class TrackTile implements JSONable {
 	public abstract boolean checkDirection(Direction direction);
 	public abstract void calcLocation(TrackState state);
 	
+	/**
+	 *  получить локацию
+	 */
 	public Point getLocation() {
 		return location;
 	}
 	
+	/**
+	 * задать локацию точки
+	 */
 	protected void setLocation(Point p) {
 		this.location = new Point(p);
 	}
 	
+	/**
+	 * задать локацию координаты точки
+	 */
 	protected void setLocation(int x, int y) {
 		this.location = new Point(x, y);
 	}
-	
+	/**
+	 * получить ориентацию
+	 */
 	public Direction getOrientation() {
 		return orientation;
 	}
 	
+	/**
+	 *  передать данные объектом Json
+	 */
 	@Override
 	public JSONObject toJSON() {
 		JSONObject obj = new JSONObject();

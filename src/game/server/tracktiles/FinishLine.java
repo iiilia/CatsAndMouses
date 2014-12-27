@@ -11,6 +11,9 @@ public class FinishLine extends CheckPoint {
         super(orientation);
     }
 
+    /**
+     * получить стартовую локацию
+     */
     public Point2D getStartLocation(int pos) {
         int w = TRACK_WIDTH / 4;
         Point2D start = new Vector2D.Polar(getOrientation().cclockwise().getAngle(),

@@ -14,6 +14,9 @@ public class CheckPoint extends Straight implements Collides {
 		super(orientation);
 	}
 	
+	/**
+	 * получить центр прямоугольника
+	 */
 	public Point2D getSpawnLocation() {
 		Rectangle rectangle = getArea().getBounds();
 		return new Point2D.Double(rectangle.getCenterX(), rectangle.getCenterY());
