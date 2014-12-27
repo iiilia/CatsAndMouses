@@ -1,8 +1,7 @@
 package game.server;
 
 public enum CarType {
-	AIRBLADE("Airblade"), BATTLE_TRAK("Battle Trak"), DIRT_DEVIL("Dirt Devil"), HAVAC(
-			"Havac"), MARAUDER("Marauder");
+	RED("Red"), YELLOW("Yellow"), BLUE("Blue"), GREEN("Green"), VIOLET("Violet");
 
 	private String name;
 
