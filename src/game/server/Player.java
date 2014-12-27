@@ -101,9 +101,6 @@ public class Player implements JSONable {
         }
     }
     
-    public void carDestroyed(DestroyedEvent e) {
-        car = null;
-    }
     
     public void accelerate() {
         if (car != null) {
@@ -190,13 +187,6 @@ public class Player implements JSONable {
             @Override
             public void checkPoint(CheckPointEvent e) {
                 checkPointCompleted(e);
-            }
-        });
-        car.addDestroyedListener(new DestroyedListener() {
-            @Override
-            public void destroyed(DestroyedEvent e) {
-                carDestroyed(e);
-                
             }
         });
     }
