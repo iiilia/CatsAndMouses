@@ -8,8 +8,6 @@ import org.json.JSONObject;
 
 import game.server.event.CheckPointEvent;
 import game.server.event.CheckPointListener;
-import game.server.event.DestroyedEvent;
-import game.server.event.DestroyedListener;
 import game.server.event.LapCompletedEvent;
 import game.server.event.LapCompletedListener;
 import game.server.event.MineDropEvent;

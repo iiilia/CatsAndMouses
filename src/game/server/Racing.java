@@ -339,7 +339,7 @@ public class Racing {
     private void finishRace() {
         // set to POSTRACE
         pause = pauseAfterRace;
-        // despawn all players, in case they have not finished
+        // убрать всех игроков в случае, если гонка завершилась
         for (Player player : racers) {
             finished.add(player);
         }

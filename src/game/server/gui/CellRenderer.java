@@ -36,7 +36,7 @@ public class CellRenderer extends JPanel implements
         if (value.getValue().getName() != null) {
             builder.append(value.getValue().getName());
         } else {
-            builder.append("Observer");
+            builder.append("Наблюдатель");
         }
         builder.append(" (");
         builder.append(value.getKey().getAddress().toString());

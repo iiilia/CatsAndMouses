@@ -63,7 +63,7 @@ public class ControlCenter {
 
     private void initializeStuff() {
         frame = new JFrame();
-        frame.setTitle("Hard Rock Racing Server");
+        frame.setTitle("Cats and Mouses Server");
         frame.setDefaultCloseOperation(JFrame.DO_NOTHING_ON_CLOSE);
         frame.setBounds(100, 100, 390, 225);
         JPanel contentPane = new JPanel();
@@ -72,7 +72,7 @@ public class ControlCenter {
         contentPane.setLayout(new BorderLayout(0, 0));
 
         JPanel topHalf = new JPanel();
-        topHalf.setBorder(new TitledBorder(null, "Players", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+        topHalf.setBorder(new TitledBorder(null, "Игроки", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         topHalf.setLayout(new BorderLayout());
         frame.add(topHalf, BorderLayout.NORTH);
 
@@ -87,21 +87,21 @@ public class ControlCenter {
         scrollPane.setHorizontalScrollBarPolicy(ScrollPaneConstants.HORIZONTAL_SCROLLBAR_NEVER);
         topHalf.add(scrollPane, BorderLayout.CENTER);
 
-        kickButton = new JButton("Kick", null);
+        kickButton = new JButton("Удалить", null);
         topHalf.add(kickButton, BorderLayout.EAST);
 
         JPanel bottomHalf = new JPanel();
-        bottomHalf.setBorder(new TitledBorder(null, "Controls", TitledBorder.LEADING, TitledBorder.TOP, null, null));
+        bottomHalf.setBorder(new TitledBorder(null, "Управление", TitledBorder.LEADING, TitledBorder.TOP, null, null));
         bottomHalf.setLayout(new FlowLayout(FlowLayout.LEADING));
         frame.add(bottomHalf);
 
-        raceStateButton = new JButton("Racestate", null);
+        raceStateButton = new JButton("Статус", null);
         bottomHalf.add(raceStateButton);
 
-        abortButton = new JButton("Abort Race", null);
+        abortButton = new JButton("Отмена", null);
         bottomHalf.add(abortButton);
 
-        quitButton = new JButton("Quit", null);
+        quitButton = new JButton("Выход", null);
         bottomHalf.add(quitButton);
     }
 }
