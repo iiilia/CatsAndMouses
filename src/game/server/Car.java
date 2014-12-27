@@ -59,7 +59,7 @@ public class Car extends GameObject implements Collides {
     private int                     accelerating;
     /**
      * продолжительность boost
-     * <0 если нет boost'a
+     * <0 если нет boost
      */
     private double                  boost;
     /**
