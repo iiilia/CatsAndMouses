@@ -28,7 +28,7 @@ import game.server.tracktiles.FinishLine;
 public class Racing {
 
     public static final boolean                 debug           = true;
-    public static final int                     fps             = 30;
+    public static final int                     fps             = 30;	//частота обновления
     public static final int                     laps            = 4;
     public static final int                     pauseAfterRace  = 10;
     public static final int                     pauseBeforeRace = 5;
@@ -40,7 +40,9 @@ public class Racing {
     private List<String>                        maps;    		//список загруженных карт
     private List<Mine>                          mines;		    //список мин
     private List<Missile>                       missiles;    	//список снарядов
-    private double                              pause;
+    
+    private double                              pause;			//пауза в игре
+    															//перед и после гонки
     private Protocol                            protocol;
     private ConcurrentLinkedQueue<QueuedAction> queuedActions;
     private List<Player>                        racers;    		//список игроков
@@ -150,7 +152,7 @@ public class Racing {
         Protocol.log(this, "Game ready, now waiting for players.");
         while (running) {
             try {
-                Thread.sleep((int) (1000 / ((double) fps) - (timeB - timeA) / 1e6));
+                Thread.sleep((int) (1000 / ((double) fps) - (timeB - timeA) / 1e6)); //регулирует частоту обновления
             } catch (InterruptedException e) {
             } catch (IllegalArgumentException e) {
                 Protocol.log(this, "Cannot keep up!");
@@ -160,7 +162,7 @@ public class Racing {
             }
             protocol.update();
             timeB = System.nanoTime();
-            double delta = (timeB - timeA) / 1e9;
+            double delta = (timeB - timeA) / 1e9; //время выполнения update
             timeA = System.nanoTime();
             update(delta);
             timeB = System.nanoTime();
