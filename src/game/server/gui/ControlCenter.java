@@ -95,9 +95,9 @@ public class ControlCenter {
         bottomHalf.setLayout(new FlowLayout(FlowLayout.LEADING));
         frame.add(bottomHalf);
 
-        raceStateButton = new JButton("Статус", null);
+        raceStateButton = new JButton("RaceState", null);	//На кнопке отображается текущее состояние игры
         bottomHalf.add(raceStateButton);
-
+        
         abortButton = new JButton("Отмена", null);
         bottomHalf.add(abortButton);
 

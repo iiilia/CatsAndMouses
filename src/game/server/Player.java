@@ -169,6 +169,7 @@ public class Player implements JSONable {
         return name;
     }
     
+    //У игрока может не быть машины, в этом случае он является наблюдателем
     public Car getCar() {
         return car;
     }

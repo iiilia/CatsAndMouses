@@ -34,16 +34,16 @@ public class Racing {
     public static final int                     pauseBeforeRace = 5;
 
     private ControlCenter               		controlCenter;
-    private int                                 curIndex;
-    private Track                               currentTrack;
+    private int                                 curIndex;		//номер выбранной карты в списке maps
+    private Track                               currentTrack;    //текущий загруженный трек
     private List<Player>                        finished;
-    private List<String>                        maps;
-    private List<Mine>                          mines;
-    private List<Missile>                       missiles;
+    private List<String>                        maps;    		//список загруженных карт
+    private List<Mine>                          mines;		    //список мин
+    private List<Missile>                       missiles;    	//список снар€дов
     private double                              pause;
     private Protocol                            protocol;
     private ConcurrentLinkedQueue<QueuedAction> queuedActions;
-    private List<Player>                        racers;
+    private List<Player>                        racers;    		//список игроков
     private boolean                             running;
     private double                              serverTime;
     private RaceState                           state;
@@ -93,7 +93,7 @@ public class Racing {
         }
     }
 
-    //ѕолучние текущей карты
+    //ѕолучение текущей карты
     public Track getCurrentTrack() {
         return currentTrack;
     }
@@ -128,7 +128,7 @@ public class Racing {
         queuedActions.add(action);
     }
 
-    //”чтановить состо€ние гонки
+    //”становить состо€ние гонки
     public void setRaceState(RaceState raceState) {
         while (state != raceState && state != RaceState.WAITING) {
             advanceGameState();
@@ -183,8 +183,8 @@ public class Racing {
             player.addMineDropListener(new MineDropListener() {							//ƒобавл€ем обработчики событий
 
                 @Override
-                public void mineDropped(MineDropEvent event) {
-                    mineDrop(event);
+                public void mineDropped(MineDropEvent e) {
+                    mineDrop(e);
                 }
             });
             player.addMissileFireListener(new MissileFireListener() {
@@ -231,6 +231,7 @@ public class Racing {
         } else {
             controlCenter.getAbortButton().setEnabled(false);
         }
+    	//ќтобразить на кнопке RaceState текущее состо€ние игры
         controlCenter.getRaceStateButton().setText(state.toString());
         Vector<Map.Entry<Connection, Player>> data = new Vector<>(protocol.getConnectionEntries());
         controlCenter.getConnections().setListData(data);
@@ -291,16 +292,16 @@ public class Racing {
                     continue;
                 }
                 if (collide(missile, player.getCar())) {
-                    missile.collideWith(player.getCar());
-                    protocol.sendMissileHit(missile, player);
+                    missile.collideWith(player.getCar()); //обработать попадание снар€да
+                    protocol.sendMissileHit(missile, player); //сформировать и отправить сообщение
                 }
             }
         }
         for (Mine mine : mines) {
             for (Player player : racers) {
                 if (player.getCar() != null && collide(mine, player.getCar())) {
-                    mine.collideWith(player.getCar());
-                    protocol.sendMineHit(mine, player);
+                    mine.collideWith(player.getCar());	//обработать столкновение с миной
+                    protocol.sendMineHit(mine, player); //сформировать и отправить сообщение
                 }
             }
         }
@@ -311,17 +312,17 @@ public class Racing {
             }
             if (collide(player.getCar(), currentTrack) ||
                     !player.getCar().getArea().intersects(currentTrack.getArea().getBounds2D())) {
-                player.getCar().collideWith(currentTrack);
+                player.getCar().collideWith(currentTrack);	//обработать столкновение с границей трека
             }
             for (CheckPoint checkpoint : currentTrack.getCheckpoints()) {
                 if (collide(player.getCar(), checkpoint)) {
-                    player.getCar().collideWith(checkpoint);
+                    player.getCar().collideWith(checkpoint);	//обработать прохождение чекпоинта
                 }
             }
             for (int j = i + 1; j < racers.size(); j++) {
                 Player player2 = racers.get(i);
                 if (player2.getCar() != null && collide(player.getCar(), player2.getCar())) {
-                    Car.collide(player.getCar(), player2.getCar());
+                    Car.collide(player.getCar(), player2.getCar());	//обработать столкновение двух машин
                 }
             }
         }
@@ -331,15 +332,13 @@ public class Racing {
         if (e.getSource() instanceof GameObject) {
             toBeDestroyed.add((GameObject) e.getSource());
         }
-        if (e.getSource() instanceof Car) {
-            protocol.sendDestroyed((Car) e.getSource());
-        }
+
     }
 
     private void finishRace() {
         // set to POSTRACE
         pause = pauseAfterRace;
-        // убрать всех игроков в случае, если гонка завершилась
+        // ƒобавить всех игроков в список закончивших гонку
         for (Player player : racers) {
             finished.add(player);
         }
@@ -352,12 +351,15 @@ public class Racing {
         mines.clear();
         newProjectiles.clear();
         state = RaceState.POSTRACE;
+        //сформировать сообщение об окончании игры и список победителей 
+        //отправить всем игрокам
         protocol.sendRaceOver(finished);
         Protocol.log(this, "Race finished, placings were " + finished.toString() +
                 " now waiting for " + pauseAfterRace + " seconds.");
     }
 
     private void initializeGUI() {
+
         controlCenter.getFrame().addWindowListener(new QueuedAction(this) {
             @Override
             public void perform() {
@@ -398,7 +400,8 @@ public class Racing {
         });
         updateGUI();
     }
-
+    
+    //обработка завершени€ уровн€
     private void lapComplete(LapCompletedEvent e) {
         if (!(e.getSource() instanceof Player)) {
             return;
