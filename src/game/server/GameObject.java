@@ -79,7 +79,10 @@ public class GameObject implements JSONable {
         obj.put("speedY", getSpeed().getY());
         return obj;
     }
-
+    
+    /**
+     * движение GameObject
+     */
     public void update(double delta) {
         location = speed.scale(delta).applyTo(location);
     }

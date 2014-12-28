@@ -226,7 +226,11 @@ public class Car extends GameObject implements Collides {
     public void stopTurning() {
         setTurning(0);
     }
-
+    
+    /**
+     * обновление положения машины в соотвестствии с 
+     * игровой логикой и физикой движения
+     */
     @Override
     public void update(double delta) {
         if (cooldown > 0) {

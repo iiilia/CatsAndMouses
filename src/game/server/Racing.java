@@ -51,8 +51,10 @@ public class Racing {
     private RaceState                           state;
 
     private Collection<GameObject>              toBeDestroyed;
-    private ConcurrentLinkedQueue<GameObject>   newProjectiles;
-
+    /**
+     * новые объекты на карте (mine,missiles)
+     */
+    private ConcurrentLinkedQueue<GameObject>   newProjectiles;		
     public Racing(List<String> maps) {
         running = false;
         pause = 0;
@@ -524,6 +526,7 @@ public class Racing {
             if (racers.isEmpty()) {
                 advanceGameState();
             }
+            // добавление запущенных mine и missiles
             while (!newProjectiles.isEmpty()) {
                 GameObject go = newProjectiles.poll();
                 if (go instanceof Missile) {
@@ -532,6 +535,7 @@ public class Racing {
                     mines.add((Mine) go);
                 }
             }
+            //удаление разрушенных mine и missiles
             for (GameObject go : toBeDestroyed) {
                 missiles.remove(go);
                 mines.remove(go);

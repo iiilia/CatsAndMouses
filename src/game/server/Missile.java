@@ -24,6 +24,11 @@ public class Missile extends GameObject implements Collides {
 		startPoint = shooter.getCar().getLocation();
 	}
 
+	/**
+	 * обновление состояния мины:
+	 * изменение положения, 
+	 * удаление при превышении дальности полета
+	 */
 	@Override
 	public void update(double delta) {
 		super.update(delta);
