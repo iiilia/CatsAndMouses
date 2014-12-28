@@ -74,7 +74,9 @@ public class Racing {
         initializeGUI();
     }
 
-    //Удаление игрока из игры
+    /**
+     * Удаление игрока из игры
+     */
     public void dropPlayer(Player player) {
         boolean removed = racers.remove(player);
         if (!removed) {
@@ -128,14 +130,18 @@ public class Racing {
         queuedActions.add(action);
     }
 
-    //Установить состояние гонки
+    /**
+     * Установить состояние гонки
+     */
     public void setRaceState(RaceState raceState) {
         while (state != raceState && state != RaceState.WAITING) {
             advanceGameState();
         }
     }
 
-    //Запуск игры
+    /**
+     * Запуск игры
+     */
     public void start() {
         running = true;
         protocol.start();
@@ -161,6 +167,9 @@ public class Racing {
         }
     }
 
+    /**
+     * Перед началом гонки
+     */
     public void startPreRace(List<Player> racers) {
         if (state != RaceState.WAITING) {
             return;
@@ -215,12 +224,18 @@ public class Racing {
        Protocol.log(this, "Prerace wait started, now waiting for " + pauseBeforeRace + " seconds.");
     }
 
+    /**
+     * Остановка игры
+     */
     public void stop() {
         running = false;
         protocol.stop();
     }
 
-    protected void updateGUI() {																//Отрисовка GUI сервера
+    /**
+     * Отрисовка GUI сервера
+     */
+    protected void updateGUI() {																
         if (state == RaceState.WAITING) {
             controlCenter.getRaceStateButton().setEnabled(false);
         } else {
@@ -237,8 +252,10 @@ public class Racing {
         controlCenter.getConnections().setListData(data);
         controlCenter.getFrame().repaint();
     }
-
-    private void advanceGameState() {															//Изменение состояние игры
+    /**
+     * Изменение состояния игры
+     */
+    private void advanceGameState() {
         switch (state) {
         case PRERACE:
             startRace();
@@ -253,8 +270,10 @@ public class Racing {
         }
         updateGUI();
     }
-
-    private void checkPointReached(CheckPointEvent event) {										//Обработка прохождения чекпоинтов
+    /**
+     * Обработка прохождения чекпоинтов
+     */
+    private void checkPointReached(CheckPointEvent event) {										
         if (!(event.getSource() instanceof Player)) {
             return;
         }
@@ -284,7 +303,11 @@ public class Racing {
         intersect.intersect(b.getArea());
         return !intersect.isEmpty();
     }
-
+    
+    /**
+     * Обработка столкновений
+     * с краем трассы, другой машиной, чекпоинтом, миной, снарядом
+     */
     private void collisions() {
         for (Missile missile : missiles) {
             for (Player player : racers) {
@@ -332,9 +355,11 @@ public class Racing {
         if (e.getSource() instanceof GameObject) {
             toBeDestroyed.add((GameObject) e.getSource());
         }
-
     }
 
+    /**
+     * Финиш гонки
+     */
     private void finishRace() {
         // set to POSTRACE
         pause = pauseAfterRace;
@@ -401,7 +426,9 @@ public class Racing {
         updateGUI();
     }
     
-    //обработка завершения уровня
+    /**
+     * обработка завершения уровня
+     */
     private void lapComplete(LapCompletedEvent e) {
         if (!(e.getSource() instanceof Player)) {
             return;
@@ -451,6 +478,9 @@ public class Racing {
         });
     }
 
+    /**
+     * Старт гонки
+     */
     private void startRace() {
         // set to RACE
         serverTime = 0;
