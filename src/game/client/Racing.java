@@ -41,19 +41,37 @@ public class Racing extends JPanel implements KeyListener {
 	
 	public Racing() {
 		running = false;
+		String name = "Sergey";
+		String car = "Yellow";
+		Client client = new Client(name, car);
+		Socket socket;
+		try {
+			socket = new Socket(host, port);
+		} catch (IOException e) {
+			return;
+		}
+		try {
+			this.connection = new Connection(socket, client);
+		} catch (IOException e) {
+			throw new RuntimeException(e);
+		}
+		new Thread(this.connection).start();
+		while (this.connection.hasInput()) {
+			this.parseInput(this.connection, this.connection.nextInput());
+		}
 	}
 
 	public static void main(String[] args) {
 		
 		// debug
 		
-		String name = "Sergey";
-		String car = "Yellow";
+/*		String name = "Sergey";
+		String car = "Yellow";*/
 		
 		//debug end
 		
 		Racing race = new Racing();
-		Client client = new Client(name, car);
+/*		Client client = new Client(name, car);
 		Socket socket;
 		try {
 			socket = new Socket(host, port);
@@ -65,10 +83,10 @@ public class Racing extends JPanel implements KeyListener {
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		new Thread(race.connection).start();
-		while (race.connection.hasInput()) {
+		new Thread(race.connection).start();*/
+/*		while (race.connection.hasInput()) {
 			race.parseInput(race.connection, race.connection.nextInput());
-		}
+		}*/
 		SwingUtilities.invokeLater(new Runnable() {
 			@Override
 			public void run() {
@@ -154,11 +172,11 @@ public class Racing extends JPanel implements KeyListener {
     			curDir = curDir.clockwise();
     		}
     	}
-    	track = new ClientTrack(startDir, tiles);
-    	Area finish = track.getFinishLine().getArea();
+    	this.track = new ClientTrack(startDir, tiles);
+    	Area finish = this.track.getFinishLine().getArea();
 		Point start = new Point(finish.getBounds().x + 90,
 				finish.getBounds().y + 113);
-		car = new Car(start, track.getStartDirection());
+		car = new Car(start, this.track.getStartDirection());
     }
     
     public static void parseAction(String msg) {
@@ -207,15 +225,31 @@ public class Racing extends JPanel implements KeyListener {
 
 	@Override
 	protected void paintComponent(Graphics g) {
+		if (track == null) {
+			try {
+				Thread.sleep(1000);
+			} catch (InterruptedException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+		}
 		super.paintComponent(g);
 		Graphics2D g2d = (Graphics2D) g;
-		g2d.setColor(Color.black);
-		g2d.fillRect(0, 0, getWidth(), getHeight());
+		if (track == null) {
+			
+		} else {
+			drawSome(g2d);
+		}
 		// I don't wanna do math! you can't make me!
 		// g2d.transform(AffineTransform
 		// .getTranslateInstance(diagonal / 2 - 50, 0));
 		// g2d.transform(AffineTransform.getScaleInstance(1, .25));
 		// g2d.transform(AffineTransform.getRotateInstance(.25 * Math.PI));
+	}
+	
+	public void drawSome(Graphics2D g2d) {
+		g2d.setColor(Color.black);
+		g2d.fillRect(0, 0, getWidth(), getHeight());
 		g2d.scale(.5, .5);
 		g2d.setColor(Color.white);
 		g2d.fill(track.getTrackArea());
