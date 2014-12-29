@@ -431,7 +431,7 @@ public class Racing {
     }
     
     /**
-     * обработка завершения уровня
+     * Обработка завершения уровня
      */
     private void lapComplete(LapCompletedEvent e) {
         if (!(e.getSource() instanceof Player)) {
