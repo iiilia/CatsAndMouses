@@ -9,6 +9,8 @@ import java.awt.geom.Rectangle2D;
 
 import org.json.JSONObject;
 
+import game.client.ClientTrack;
+import game.server.Track;
 import game.server.event.CheckPointEvent;
 import game.server.event.CheckPointListener;
 import game.server.tracktiles.CheckPoint;
@@ -116,6 +118,45 @@ public class Car extends GameObject implements Collides {
         }
     }
 
+    public void collideWith(ClientTrack other) {
+        Point2D center = new Point2D.Double(other.getTrackArea().getBounds2D()
+                .getCenterX(), other.getTrackArea().getBounds2D().getCenterY());
+        Vector2D fromCenter = new Vector2D.Cartesian(center, getLocation());
+        double bounceDirection = fromCenter.getDirection();
+        int turndir = -1;
+        Area test = getArea();
+        test.intersect(other.getOuterArea());
+        if (!test.isEmpty() || !getArea().intersects(other.getArea().getBounds2D())) {
+            bounceDirection += Math.PI;
+            turndir = 1;
+        }
+        Vector2D facingVector = new Vector2D.Polar(facing, 10);
+        Line2D facingLine = new Line2D.Double(getLocation(),
+                facingVector.applyTo(getLocation()));
+        turndir *= CollisionTools.isRight(facingLine, center);
+
+        
+        /* поменять направление движения машины
+         * если только это не вызовет следующего столкновения
+         */
+        
+        double oldFacing = facing;
+        facing += turndir * collisionRotation;
+        test = getArea();
+        test.intersect(other.getNegative());
+        if (!test.isEmpty()) {
+            facing = oldFacing;
+        }
+
+        // снизить скорость при повороте
+        setSpeed(getSpeed().scale(
+                Math.abs(Math.sin(getSpeed().angleBetween(fromCenter)))));
+
+        // изменить направление скорости при отскоке
+        setSpeed(getSpeed().add(
+                new Vector2D.Polar(bounceDirection, collisionRepulsion)));
+    }
+    
     public void collideWith(Track other) {
         Point2D center = new Point2D.Double(other.getTrackArea().getBounds2D()
                 .getCenterX(), other.getTrackArea().getBounds2D().getCenterY());
@@ -316,4 +357,5 @@ public class Car extends GameObject implements Collides {
         one.setSpeed(one.getSpeed().subtract(ab));
         other.setSpeed(other.getSpeed().add(ab));
     }
+    
 }

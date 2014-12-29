@@ -2,7 +2,7 @@ package game.client;
 
 import game.server.Car;
 import game.server.Direction;
-import game.server.Track;
+import game.client.ClientTrack;
 import game.server.tracktiles.Curve;
 import game.server.tracktiles.FinishLine;
 import game.server.tracktiles.Straight;
@@ -35,7 +35,7 @@ public class Racing extends JPanel implements KeyListener {
 	public static int port = 1993;
 	private boolean running;
 	private Connection connection;
-	private Track track;
+	private ClientTrack track;
 	private Car car;
 	
 	public Racing() {
@@ -59,15 +59,14 @@ public class Racing extends JPanel implements KeyListener {
 		} catch (IOException e) {
 			return;
 		}
-		Connection connection;
 		try {
-			connection = new Connection(socket, client);
+			race.connection = new Connection(socket, client);
 		} catch (IOException e) {
 			throw new RuntimeException(e);
 		}
-		new Thread(connection).start();
-		while (connection.hasInput()) {
-			race.parseInput(connection, connection.nextInput());
+		new Thread(race.connection).start();
+		while (race.connection.hasInput()) {
+			race.parseInput(race.connection, race.connection.nextInput());
 		}
 	}
 	
@@ -132,16 +131,6 @@ public class Racing extends JPanel implements KeyListener {
     			case DOWN: tiles.add(new Curve(Direction.UP));
     			break;
     			}
-/*    			if (curDir.equals(Direction.LEFT)) {
-    					tiles.add(new Curve(Direction.UP));
-    			}
-    					else if (curDir.equals(Direction.UP)) {
-    						tiles.add(new Curve(Direction.RIGHT));
-    					} else if (curDir.equals(Direction.RIGHT)) {
-    						tiles.add(new Curve(Direction.DOWN));
-    					} else if (curDir.equals(Direction.DOWN)) {
-    						tiles.add(new Curve(Direction.DOWN));
-    					}*/
     			curDir = curDir.cclockwise();
     		}
     		if (JSONtile.getString(0).equals("turnright")) {
@@ -155,11 +144,10 @@ public class Racing extends JPanel implements KeyListener {
     			case DOWN: tiles.add(new Curve(Direction.DOWN));
     			break;
     			}
-//    			tiles.add(new Curve(curDir));
     			curDir = curDir.clockwise();
     		}
     	}
-    	track = new Track(startDir, tiles);
+    	track = new ClientTrack(startDir, tiles);
     	Area finish = track.getFinishLine().getArea();
 		Point start = new Point(finish.getBounds().x + 90,
 				finish.getBounds().y + 113);
@@ -292,7 +280,7 @@ public class Racing extends JPanel implements KeyListener {
 
 	}
 
-	protected Track getTrack() {
+	protected ClientTrack getTrack() {
 		return track;
 	}
 
