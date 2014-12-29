@@ -21,6 +21,7 @@ import java.util.ArrayList;
 
 import javax.swing.JFrame;
 import javax.swing.JPanel;
+import javax.swing.SwingUtilities;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -68,6 +69,12 @@ public class Racing extends JPanel implements KeyListener {
 		while (race.connection.hasInput()) {
 			race.parseInput(race.connection, race.connection.nextInput());
 		}
+		SwingUtilities.invokeLater(new Runnable() {
+			@Override
+			public void run() {
+				createAndShowShit(race);
+			}
+		});
 	}
 	
     public void parseInput(Connection connection, String message) {
