@@ -6,7 +6,7 @@ package game.server;
 public enum Direction {																//Перечисление направлений
 	LEFT, UP, RIGHT, DOWN;
 
-	public Direction opposite() {													//Получние противополжного направления
+	public Direction opposite() {													//Получение противополжного направления
 		switch (this) {
 		case LEFT:
 			return RIGHT;

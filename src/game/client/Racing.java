@@ -3,11 +3,14 @@ package game.client;
 import game.server.Car;
 import game.server.Direction;
 import game.server.Track;
+import game.server.tracktiles.Curve;
+import game.server.tracktiles.Straight;
 import game.server.tracktiles.TrackTile;
 
 import java.awt.Color;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.Point;
 import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 import java.awt.geom.Area;
@@ -63,11 +66,11 @@ public class Racing extends JPanel implements KeyListener {
 		}
 		new Thread(connection).start();
 		while (connection.hasInput()) {
-			parseInput(connection, connection.nextInput());
+			race.parseInput(connection, connection.nextInput());
 		}
 	}
 	
-    public static void parseInput(Connection connection, String message) {
+    public void parseInput(Connection connection, String message) {
         JSONObject object;
         try {
             object = new JSONObject(message);
@@ -103,16 +106,34 @@ public class Racing extends JPanel implements KeyListener {
         }*/
     }
     
-    public static void createTrack(JSONObject object) {
-    	JSONObject track = object.getJSONObject("track");
-    	JSONArray JSONtiles = track.getJSONArray("tiles");
+    public void createTrack(JSONObject object) {
+    	JSONObject JSONtrack = object.getJSONObject("track");
+    	JSONArray JSONtiles = JSONtrack.getJSONArray("tiles");
+    	Direction startDir = Direction.valueOf(JSONtrack.getString("startdir"));
+    	Direction curDir = startDir;
     	JSONArray JSONtile = null;
     	ArrayList<TrackTile> tiles = new ArrayList<>();
     	for (int i = 0; i < JSONtiles.length(); i++) {
     		JSONtile = JSONtiles.getJSONArray(i);
-/*    		if (JSONtile.get(0).toString() == "straight")
-    			tiles.add()*/
+    		System.out.println(JSONtile.getString(0));
+    		if (JSONtile.getString(0).equals("finish"))
+    			tiles.add(new Straight(startDir));
+    		if (JSONtile.getString(0).equals("straight"))
+    			tiles.add(new Straight(curDir));
+    		if (JSONtile.getString(0).equals("turnleft")) {
+    			tiles.add(new Curve(curDir));
+    			curDir = curDir.cclockwise();
+    		}
+    		if (JSONtile.getString(0).equals("turnright")) {
+    			tiles.add(new Curve(curDir));
+    			curDir = curDir.clockwise();
+    		}
     	}
+    	track = new Track(startDir, tiles);
+    	Area finish = track.getFinishLine().getArea();
+		Point start = new Point(finish.getBounds().x + 90,
+				finish.getBounds().y + 113);
+		car = new Car(start, track.getStartDirection());
     }
     
     public static void parseAction(String msg) {

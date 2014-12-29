@@ -166,7 +166,7 @@ public class Track implements Collides, JSONable {
 
         track.transform(AffineTransform.getTranslateInstance(-bounds.x,
                 -bounds.y));
-        // подсчет конечной локации для тила
+        // подсчет конечной локации для тайла
         TrackState state = new TrackState(new Point((int) -bounds.getX(),
                 (int) -bounds.getY()), startDir);
         for (TrackTile t : tiles) {
