@@ -4,6 +4,7 @@ import game.server.Car;
 import game.server.Direction;
 import game.server.Track;
 import game.server.tracktiles.Curve;
+import game.server.tracktiles.FinishLine;
 import game.server.tracktiles.Straight;
 import game.server.tracktiles.TrackTile;
 
@@ -117,15 +118,44 @@ public class Racing extends JPanel implements KeyListener {
     		JSONtile = JSONtiles.getJSONArray(i);
     		System.out.println(JSONtile.getString(0));
     		if (JSONtile.getString(0).equals("finish"))
-    			tiles.add(new Straight(startDir));
+    			tiles.add(new FinishLine(startDir));
     		if (JSONtile.getString(0).equals("straight"))
     			tiles.add(new Straight(curDir));
-    		if (JSONtile.getString(0).equals("turnleft")) {
-    			tiles.add(new Curve(curDir));
+    		if (JSONtile.getString(0).equals("turnleft")) {													//Magic
+    			switch (curDir) {
+    			case LEFT: tiles.add(new Curve(Direction.UP));
+    			break;
+    			case UP: tiles.add(new Curve(Direction.RIGHT));
+    			break;
+    			case RIGHT: tiles.add(new Curve(Direction.DOWN));
+    			break;
+    			case DOWN: tiles.add(new Curve(Direction.UP));
+    			break;
+    			}
+/*    			if (curDir.equals(Direction.LEFT)) {
+    					tiles.add(new Curve(Direction.UP));
+    			}
+    					else if (curDir.equals(Direction.UP)) {
+    						tiles.add(new Curve(Direction.RIGHT));
+    					} else if (curDir.equals(Direction.RIGHT)) {
+    						tiles.add(new Curve(Direction.DOWN));
+    					} else if (curDir.equals(Direction.DOWN)) {
+    						tiles.add(new Curve(Direction.DOWN));
+    					}*/
     			curDir = curDir.cclockwise();
     		}
     		if (JSONtile.getString(0).equals("turnright")) {
-    			tiles.add(new Curve(curDir));
+    			switch (curDir) {
+    			case LEFT: tiles.add(new Curve(Direction.LEFT));
+    			break;
+    			case UP: tiles.add(new Curve(Direction.UP));
+    			break;
+    			case RIGHT: tiles.add(new Curve(Direction.RIGHT));
+    			break;
+    			case DOWN: tiles.add(new Curve(Direction.DOWN));
+    			break;
+    			}
+//    			tiles.add(new Curve(curDir));
     			curDir = curDir.clockwise();
     		}
     	}
